@@ -22,12 +22,23 @@ toc: false
 ---
 
 ## Recent Publications
-{% assign recents = site.publications | sort: 'year' | reverse | slice: 0, 4 %}
+{% assign recents = site.publications | sort:"year" | reverse | slice: 0, 4 %}
 {% for p in recents %}
-- **{{ p.title }}**  
-  {{ p.authors }}  
-  _{{ p.venue }}_ ({{ p.year }})  
-  {% if p.links %}{% for l in p.links %}
-  [{{ l.label }}]({{ l.url }}){% if forloop.last == false %} · {% endif %}
-  {% endfor %}{% endif %}
+<div class="pub-item" style="display:flex;gap:14px;margin:18px 0;">
+  {% if p.thumbnail %}
+  <div style="flex:0 0 160px;">
+    <a href="{{ p.links[0].url | default: '#' }}"><img src="{{ p.thumbnail }}" alt="{{ p.title }}" style="width:160px;height:auto;border-radius:6px;"></a>
+  </div>
+  {% endif %}
+  <div style="flex:1;">
+    <div style="font-weight:600;margin-bottom:6px;">{{ p.title }}</div>
+    <div style="margin-bottom:4px;">{{ p.authors }}</div>
+    <div style="font-style:italic;margin-bottom:8px;">{{ p.venue }}{% if p.year %} ({{ p.year }}){% endif %}</div>
+    {% if p.links %}{% for l in p.links %}
+      <a class="btn btn--primary btn--small" href="{{ l.url }}" style="margin-right:6px;">{{ l.label }}</a>
+    {% endfor %}{% endif %}
+  </div>
+</div>
 {% endfor %}
+
+[See all publications →](/publications/)

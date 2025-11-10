@@ -7,9 +7,9 @@ toc: false
 ---
 
 Hi! I am a Ph.D. candidate in the Department of Mechanical and Robotics Engineering at GIST, Republic of Korea. My research focuses on understanding human perception of 2D and 3D environments, developing geometry-based deep learning methods, integrating analytic geometric priors with modern neural architectures, and designing AR/VR/MR remote-collaboration platforms.
-I identify challenges people encounter in real-world contexts and develop systems that effectively support their needs. I enjoy applying recent AI technologies to my work and exploring how AI can practically support human. 
+I study the practical obstacles people face in 2D and 3D tasks and build geometry-informed AI systems that genuinely help them. By combining modern deep learning with explicit geometric structure, I aim to deliver AR, VR, and MR platforms that are reliable, efficient, and easy to use in day-to-day collaboration.
 
-I will receive my Ph.D. from School of Integrated Technology at GIST, where I was advised by Prof. Jin-Hyuk Hong in SCILAB.
+I will receive my Ph.D. from the School of Integrated Technology at GIST, advised by Prof. Kwanghee Ko in the MODSIM Lab, with the degree to be awarded at the Winter Commencement Ceremony in February 2026.
 
 ---
 

@@ -12,13 +12,51 @@ toc: false
 ---
 
 ## News
-<ul>
-{% for item in site.data.news limit:5 %}
-  <li><strong>{{ item.date }}</strong> — {{ item.text }}</li>
+<ul id="news-list">
+{% for item in site.data.news %}
+  <li class="{% if forloop.index > 5 %}extra-news{% endif %}">
+    <strong>{{ item.date }}</strong> — {{ item.text }}
+  </li>
 {% endfor %}
 </ul>
-# [Show more](/news/)
-<p><a class="btn btn--small" href="/news/">Show more</a></p>
+
+<p>
+  <a id="news-toggle" class="btn btn--small" href="#" role="button" aria-expanded="false">Show more</a>
+  <!-- 전체 목록 페이지도 유지하고 싶으면 옆에 링크 하나 더 -->
+  <!-- <a class="btn btn--small" href="/news/" style="margin-left:8px;">View all</a> -->
+</p>
+
+<style>
+  /* 처음엔 5개만 보이고, 나머지는 숨김 */
+  #news-list .extra-news { display: none; }
+  #news-list li { margin: .4rem 0; }
+</style>
+
+<script>
+(function () {
+  var LIMIT = 5;
+  var list = document.querySelectorAll('#news-list li');
+  var btn  = document.getElementById('news-toggle');
+
+  function setState(expanded) {
+    for (var i = LIMIT; i < list.length; i++) {
+      list[i].style.display = expanded ? 'list-item' : 'none';
+    }
+    btn.textContent = expanded ? 'Show less' : 'Show more';
+    btn.setAttribute('aria-expanded', expanded);
+  }
+
+  // 초기 상태: 접힘
+  setState(false);
+
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    setState(!expanded);
+  });
+})();
+</script>
+
 
 ---
 

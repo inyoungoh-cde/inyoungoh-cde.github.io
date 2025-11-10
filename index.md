@@ -6,7 +6,7 @@ author_profile: true     # ← 왼쪽 사이드바 표시
 toc: false
 ---
 
-Hi! I am a Ph.D. candidate in the [Department of Mechanical and Robotics Engineering at GIST](https://me.gist.ac.kr/meeng/index.do), Republic of Korea. My research focuses on understanding human perception of 2D and 3D environments, developing geometry-based deep learning methods, integrating analytic geometric priors with modern neural architectures, and designing AR/VR/MR remote-collaboration platforms.
+Hi! I am a Ph.D. candidate in the [Department of Mechanical and Robotics Engineering](https://me.gist.ac.kr/meeng/index.do) at GIST, Republic of Korea. My research focuses on understanding human perception of 2D and 3D environments, developing geometry-based deep learning methods, integrating analytic geometric priors with modern neural architectures, and designing AR/VR/MR remote-collaboration platforms.
 
 I study the practical obstacles people face in 2D and 3D tasks and build geometry-informed AI systems that genuinely help them. By combining modern deep learning with explicit geometric structure, I aim to deliver AR, VR, and MR platforms that are reliable, efficient, and easy to use in day-to-day collaboration.
 

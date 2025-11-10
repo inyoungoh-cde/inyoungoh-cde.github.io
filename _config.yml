@@ -21,15 +21,15 @@ collections:
 author:
   name: "Inyoung Oh"
   avatar: "/assets/images/profile.jpg"
-  bio: "HCI / AI & ST-OSCs / 3D Vision"
+  bio: "CAD/CAM / 2D/3D Vision / Spatial Intelligence"
   location: "GIST, Republic of Korea"
   links:
     - label: "Email"
-      url: "mailto:your_email@example.com"
+      url: "mailto:iyohcde@gmail.com"
       icon: "fas fa-envelope"
     - label: "Google Scholar"
-      url: "https://scholar.google.com/citations?user=XXXX"
-      icon: "ai ai-google-scholar"   # <- 안 보이면 'fas fa-graduation-cap'로
+      url: "https://scholar.google.co.kr/citations?hl=ko&user=e3h5YtAAAAAJ&view_op=list_works&sortby=pubdate"
+      icon: "fas fa-graduation-cap"   # <- 안 보이면 'fas fa-graduation-cap'로  ai ai-google-scholar
     - label: "GitHub"
       url: "https://github.com/inyoungoh-cde"
       icon: "fab fa-github"

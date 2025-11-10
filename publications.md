@@ -2,7 +2,7 @@
 layout: single
 title: Publication
 permalink: /publications/
-author_profile: true         # ← 왼쪽 사이드바 유지
+author_profile: true
 ---
 
 {% assign groups = "International|Under review|Domestic" | split:"|" %}
@@ -12,13 +12,15 @@ author_profile: true         # ← 왼쪽 사이드바 유지
 
 {% assign pubs = site.publications | where:"category", g | sort:"year" | reverse %}
 {% for p in pubs %}
-<div class="pub-item" style="display:flex;gap:14px;margin:18px 0;">
+<div class="pub-item" style="display:flex;margin:18px 0;">
   {% if p.thumbnail %}
   <div style="flex:0 0 160px;">
-    <a href="{{ p.links[0].url | default: '#' }}"><img src="{{ p.thumbnail }}" alt="{{ p.title }}" style="width:160px;height:auto;border-radius:6px;"></a>
+    <a href="{{ p.links[0].url | default: '#' }}">
+      <img class="pub-thumb" src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy">
+    </a>
   </div>
   {% endif %}
-  <div style="flex:1;">
+  <div style="flex:1;margin-left:16px;">
     <div style="font-weight:600;margin-bottom:6px;">{{ p.title }}</div>
     <div style="margin-bottom:4px;">{{ p.authors }}</div>
     <div style="font-style:italic;margin-bottom:8px;">{{ p.venue }}{% if p.year %} ({{ p.year }}){% endif %}</div>

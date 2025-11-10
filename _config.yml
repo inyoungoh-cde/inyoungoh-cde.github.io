@@ -20,7 +20,7 @@ collections:
 # 사이드바·프로필 기본값
 author:
   name: "Inyoung Oh"
-  avatar: "/assets/images/profile.jpg"   # 3단계에서 이미지 추가
+  avatar: "/assets/images/profile.jpg"
   bio: "HCI / AI & ST-OSCs / 3D Vision"
   location: "GIST, Republic of Korea"
   links:
@@ -29,7 +29,7 @@ author:
       icon: "fas fa-envelope"
     - label: "Google Scholar"
       url: "https://scholar.google.com/citations?user=XXXX"
-      icon: "ai ai-google-scholar"
+      icon: "ai ai-google-scholar"   # <- 안 보이면 'fas fa-graduation-cap'로
     - label: "GitHub"
       url: "https://github.com/inyoungoh-cde"
       icon: "fab fa-github"

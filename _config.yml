@@ -38,8 +38,8 @@ author:
       icon: "far fa-file-pdf"
 
 # 내비게이션 (원하면 수정)
-nav:
-  - title: "about"
-    url: /about/
-  - title: "publication"
-    url: /publications/
+#nav:
+#  - title: "about"
+#    url: /about/
+#  - title: "publication"
+#    url: /publications/

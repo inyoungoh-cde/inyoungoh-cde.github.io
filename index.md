@@ -7,7 +7,9 @@ toc: false
 ---
 
 ## Hi!
-간단 자기소개 2~4문장. 연구 분야, 현재 소속, 관심 키워드 등.
+Hi! I am a postdoc in the Department of AI Convergence at GIST, Republic of Korea. My research focuses on human-centered AI systems that enhance usability and accessibility. I identify challenges people encounter in real-world contexts and develop systems that effectively support their needs. I enjoy applying recent AI technologies to my work and exploring how AI can practically support human. 
+
+I received my Ph.D. from School of Integrated Technology at GIST, where I was advised by Prof. Jin-Hyuk Hong in SCILAB.
 
 ---
 

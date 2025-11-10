@@ -1,4 +1,6 @@
 - date: 2020-06-11
   text: "Our paper has been accepted for publication in <em>The Visual Computer</em> (IF = 2.601): \"Automated recognition of 3D pipelines from point clouds.\""
+- date: 2018-09-07
+  text: "Our paper has been accepted for presentation at <em>EuroVR 2018</em>: \"Automatic detection of cylindrical objects from unorganized point cloud.\""
 - date: 2017-06-06
-  text: "Our paper has been accepted for presentation at <em>Computer Graphics International 2017</em> (CGI 2017): \"A RANSAC-based Method for Detection of Multiple Spheres from a Point Cloud,\""
+  text: "Our paper has been accepted for presentation at <em>Computer Graphics International 2017</em> (CGI 2017): \"A RANSAC-based Method for Detection of Multiple Spheres from a Point Cloud.\""

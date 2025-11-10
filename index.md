@@ -17,7 +17,7 @@ toc: false
   <li><strong>{{ item.date }}</strong> — {{ item.text }}</li>
 {% endfor %}
 </ul>
-#[Show more](/news/)
+# [Show more](/news/)
 <p><a class="btn btn--small" href="/news/">Show more</a></p>
 
 ---

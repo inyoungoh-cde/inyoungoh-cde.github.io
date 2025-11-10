@@ -5,21 +5,18 @@
 @import "minimal-mistakes";
 
 /* --- Publications thumbnail standard size --- */
-.pub-item { gap: 16px; }
+.pub-item { gap: 16px; }   /* 부모가 display:flex; 일 때 간격 */
 
 .pub-thumb {
-  width: 160px;           /* 가로 고정 */
-  aspect-ratio: 4 / 3;    /* 4:3 비율 상자 (또는 height: 120px 써도 됨) */
-  object-fit: cover;      /* 박스에 꽉 채우고 넘치는 부분은 잘라냄 */
+  width: 160px;        /* 가로 고정 */
+  aspect-ratio: 4 / 3; /* 4:3 박스 (원하면 1/1, 16/9 등으로 변경) */
+  object-fit: cover;   /* 박스에 꽉 채우고 초과분은 크롭 */
   border-radius: 6px;
   display: block;
   box-shadow: 0 0 0 1px rgba(0,0,0,.06);
 }
 
-/* 모바일에서 조금 줄임 */
+/* 모바일에서 조금 축소 */
 @media (max-width: 600px) {
   .pub-thumb { width: 120px; }
 }
-
-// 가벼운 보정
-.pub-item img { box-shadow: 0 0 0 1px rgba(0,0,0,.06); }

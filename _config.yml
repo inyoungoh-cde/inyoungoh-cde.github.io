@@ -1,10 +1,29 @@
-title: Personal Site
-description: 연구 · 프로젝트 · 글을 정리합니다
+title: Inyoung Oh
+description: 연구 · 프로젝트 · 글 아카이브
 theme: minima
+
+# 사용자 페이지는 baseurl 비움
 baseurl: ""
 url: "https://inyoungoh-cde.github.io"
+timezone: Asia/Seoul
 
+author:
+  name: Inyoung Oh
+  email: your_email@example.com   # ← 네 이메일로 변경
+
+# 상단 메뉴에 띄울 페이지
 header_pages:
   - about.md
   - projects.md
   - blog.md
+
+# (선택) 푸터/사이드에 소셜 링크
+minima:
+  social_links:
+    - platform: github
+      user_url: https://github.com/inyoungoh-cde
+    # 필요하면 아래 줄들의 주석을 풀고 URL 채우기
+    # - platform: google-scholar
+    #   user_url: https://scholar.google.com/citations?user=XXXX
+    # - platform: linkedin
+    #   user_url: https://www.linkedin.com/in/XXXX

@@ -57,7 +57,6 @@ toc: false
 })();
 </script>
 
-
 ---
 
 ## Recent Publications

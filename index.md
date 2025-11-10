@@ -18,7 +18,7 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
 <ul id="news-list">
 {% for item in site.data.news %}
   <li class="{% if forloop.index > 5 %}extra-news{% endif %}">
-    <strong>{{ item.date }}</strong> — {{ item.text }}
+    <strong>{{ item.date }}</strong> — {{ item.text | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}
   </li>
 {% endfor %}
 </ul>

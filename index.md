@@ -6,8 +6,8 @@ author_profile: true     # ← 왼쪽 사이드바 표시
 toc: false
 ---
 
-## Hi!
-Hi! I am a Ph.D. candidate in the Department of Mechanical and Robotics Engineering at GIST, Republic of Korea. My research focuses on human-centered AI systems that enhance usability and accessibility. I identify challenges people encounter in real-world contexts and develop systems that effectively support their needs. I enjoy applying recent AI technologies to my work and exploring how AI can practically support human. 
+Hi! I am a Ph.D. candidate in the Department of Mechanical and Robotics Engineering at GIST, Republic of Korea. My research focuses on human-centered AI systems that enhance usability and accessibility. 
+I identify challenges people encounter in real-world contexts and develop systems that effectively support their needs. I enjoy applying recent AI technologies to my work and exploring how AI can practically support human. 
 
 I will receive my Ph.D. from School of Integrated Technology at GIST, where I was advised by Prof. Jin-Hyuk Hong in SCILAB.
 

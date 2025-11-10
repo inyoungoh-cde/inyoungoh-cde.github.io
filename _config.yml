@@ -16,6 +16,7 @@ collections:
     output: true
     permalink: /publications/:path/
 
+
 # 사이드바·프로필 기본값
 author:
   name: "Inyoung Oh"

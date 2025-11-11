@@ -1,5 +1,5 @@
 ---
-title: "Domestic (Selected)"
+title: "Domestic (Whole)"
 category: "Domestic"
 year: 2025
 list: true

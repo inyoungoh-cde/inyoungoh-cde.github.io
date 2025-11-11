@@ -5,7 +5,7 @@ year: 2025
 list: true
 ---
 
-<div class="pub-list">
+<div class="pub-list" markdown="1">
 
 **Enhanced Boundary-Aware Semantic Segmentation via Deep Learning and Geometric Analysis**  
 <u>Inyoung Oh</u>, Minsung Kim, Kwanghee Ko  

@@ -52,23 +52,23 @@ Gilsang Jang, Moongu Son, <u>Inyoung Oh</u>, Daewoon Kim, Jinho Song, Kwanghee K
 *Society for Computational Design and Engineering (CDE) Conference 2022*
 
 **Improved Semantic SLAM Using LiDAR Normal Vectors**  
-Minsung Kim, <u>Inyoung Oh</u>, Daewoon Kim, Jihun Park, Kwanghee Ko  
+Minsung Kim, <u>Inyoung Oh</u>, Daewoon Kim, Jihoon Park, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2021*
 
 **Object-Detection-Based 3D LiDAR Intensity Calibration and Real-Time Detection of Clustered Object Candidates Using Deep Learning**  
 <u>Inyoung Oh</u>, Minsung Kim, Moongu Son, Gilsang Jang, Junsang Yun, Jinho Song, Daewoon Kim, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2021*
 
-**Quasi-Real-Time Plane Detection Using Depth Images**  
-<u>Inyoung Oh</u>, Daewoon Kim, Jinho Song, Jihun Park, Moongu Son, Junsang Yun, Gilsang Jang, Kwanghee Ko  
+**Semi-Real-Time Plane Detection Using Depth Images**  
+<u>Inyoung Oh</u>, Daewoon Kim, Jinho Song, Jihoon Park, Moongu Son, Junsang Yun, Gilsang Jang, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2020*
 
 **Analysis of Plane Normal-Vector Estimation and Deep-Learning–Based Selection of Parameter *k***  
-<u>Inyoung Oh</u>, Junhee Lee, Daewoon Kim, Jihun Park, Kwanghee Ko  
+<u>Inyoung Oh</u>, Junhee Lee, Daewoon Kim, Jihoon Park, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2020*
 
 **Augmented-Reality Technologies Leveraging Indoor Localization**  
-Jihun Park, <u>Inyoung Oh</u>, Junhee Lee, Sangmin Park, Kwanghee Ko  
+Jihoon Park, <u>Inyoung Oh</u>, Junhee Lee, Sangmin Park, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2019*
 
 **Detection of Spheres and Cylinders in Point Clouds Using RANSAC and the 2D Hough Transform**  

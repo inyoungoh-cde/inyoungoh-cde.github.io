@@ -145,3 +145,61 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
 }
 </style>
 
+## Awards
+
+<div class="awards-card">
+
+  <!-- Awards -->
+  <div class="awards-group">
+    <div class="awards-title"><i class="fas fa-trophy"></i><strong>Awards</strong></div>
+    <ul class="awards-list">
+      <li>
+        <strong>Best Poster Award</strong>, Korean CDE Society (2025) — 
+        <a href="https://webzine.cde.or.kr/webzine/sub.html?md_no=91" target="_blank" rel="noopener">webzine</a> ·
+        <a href="https://me.gist.ac.kr/prog/bbsArticle/BBSMSTR_000000012172/view.do?nttId=B000000081724Yp4vO2m" target="_blank" rel="noopener">GIST website</a>
+      </li>
+      <li><strong>Best Poster Award</strong>, Korean CDE Society (2023)</li>
+      <li><strong>CDE DX Encouragement Award</strong>, Korean CDE Society (2022)</li>
+      <li><strong>Best Poster Award</strong>, Korean CDE Society (2021)</li>
+      <li><strong>Best Poster Award</strong>, Korean CDE Society (2020)</li>
+    </ul>
+  </div>
+
+  <!-- Scholarships -->
+  <div class="awards-group">
+    <div class="awards-title"><i class="fas fa-medal"></i><strong>Scholarship</strong></div>
+    <ul class="awards-list">
+      <li>
+        <strong>Outstanding PhD Student RA Scholarship</strong>, GIST 
+        <span class="muted">— 2018, 2019, 2020, 2021, 2023</span>
+      </li>
+      <li>
+        <strong>GIST Scholarship (Government support – Doctoral studies)</strong>
+        <span class="muted">— 2018–Present</span>
+      </li>
+      <li>
+        <strong>GIST Scholarship (Government support – Master’s studies)</strong>
+        <span class="muted">— 2016–2018</span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<style>
+/* --- Awards card style (Minimal Mistakes friendly) --- */
+.awards-card{
+  background:#fff;border:1px solid rgba(0,0,0,.06);
+  border-radius:14px;padding:18px 20px;margin-top:.6rem;
+  box-shadow:0 1px 0 rgba(0,0,0,.06),0 2px 10px rgba(0,0,0,.04);
+}
+.awards-group + .awards-group{ margin-top:.8rem; }
+.awards-title{display:flex;gap:.5rem;align-items:center;margin-bottom:.25rem;}
+.awards-title i{color:#f4b400;}  /* trophy/medal color */
+.awards-list{margin:.25rem 0 0 .1rem;}
+.awards-list li{margin:.45rem 0;line-height:1.55;}
+.muted{color:#666;}
+@media (max-width:600px){ .awards-card{padding:16px;} }
+</style>
+
+

@@ -1,105 +1,82 @@
 ---
-# Only the main Sass file needs front matter for Jekyll to compile it
 ---
 
-/* Minimal Mistakes skin + core */
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+/* 테마 불러오기 */
 @import "minimal-mistakes";
 
-/* =========================================================
-   Publications – 공통 스타일 및 레이아웃 보정
-   ========================================================= */
+/* ===============================
+   Publication 레이아웃/타이포 보정
+   =============================== */
 
-/* 페이지 본문 폭 제한 완화(더 넓게) */
+/* 페이지 본문 폭 넓히기 */
 .page .page__content { max-width: 100%; }
 
-/* ---------------------------------------------------------
-   Domestic 묶음(목록) 전용: 타이포 및 줄바꿈 보정
-   --------------------------------------------------------- */
-.pub-list,
-.pub-list p,
-.pub-list li {
-  max-width: none !important;   /* 테마의 문단 최대폭 제한 해제 */
-  word-break: normal;           /* 단어 중간 강제 줄바꿈 방지 */
-  overflow-wrap: anywhere;      /* 너무 긴 토큰만 부드럽게 줄바꿈 */
-  line-height: 1.5;
-}
-.pub-list > p { margin: 0 0 12px; }
-.pub-list u { text-underline-offset: 2px; }
-.pub-list b,
-.pub-list strong { font-weight: 600; }
-
-/* ---------------------------------------------------------
-   카드(기존 pub-item 기반) 가독성 보정
-   (International / Under review에서 사용)
-   --------------------------------------------------------- */
+/* -------------------------------
+   International / Under review
+   : 카드 레이아웃을 Grid로 통일
+   ------------------------------- */
 .pub-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 8px 0;
+  display: grid !important;
+  grid-template-columns: 160px 1fr;
+  gap: 14px 16px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,.08);
 }
-.pub-item .btn { margin-right: 6px; margin-top: 6px; }
 
 /* 썸네일 공통 규격 */
 .pub-thumb {
-  width: 160px;           /* 가로 고정 */
-  aspect-ratio: 4 / 3;    /* 4:3 박스 */
-  object-fit: cover;      /* 박스에 꽉 채우고 초과분 크롭 */
+  width: 160px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 6px;
   display: block;
   box-shadow: 0 0 0 1px rgba(0,0,0,.06);
 }
 
-/* 모바일에서 썸네일 살짝 축소 */
-@media (max-width: 600px) {
-  .pub-thumb { width: 120px; }
-}
-
-/* =========================================================
-   Publications – Dense Two-Column Grid (신규)
-   International/Under review에도 적용 가능.
-   필요 시 컨테이너에 .pub-grid, 각 항목에 .pub-card 사용.
-   ========================================================= */
-
-/* 카드 내부 텍스트 살짝 압축 */
-.page__content .pub-card { font-size: 0.97rem; }
-
-/* 2열 그리드(<=900px이면 1열) */
-.pub-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px 24px;
-}
-@media (max-width: 900px) {
-  .pub-grid { grid-template-columns: 1fr; }
-}
-
-/* 카드 본체: 썸네일 + 본문 2열 */
-.pub-card {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 14px;
-  align-items: start;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(0,0,0,.08);
-}
-
-/* 텍스트 블록 간 간격 */
+/* 카드 내부 타이포 살짝 압축 + 간격 축소 */
 .pub-title   { font-weight: 600; line-height: 1.25; margin: 0 0 4px; }
 .pub-authors { margin: 0 0 2px; }
 .pub-venue   { font-style: italic; margin: 0 0 6px; color: var(--mm-muted, #666); }
+.pub-item .btn { margin-right: 6px; margin-top: 4px; }
 
-/* 액션 버튼 묶음 */
-.pub-actions .btn { margin-right: 6px; margin-top: 2px; }
+/* 좁은 화면 대응 */
+@media (max-width: 900px) {
+  .pub-item { grid-template-columns: 120px 1fr; }
+  .pub-thumb { width: 120px; }
+}
 
-/* 제목 2줄 말줄임으로 카드 높이 균일화(선택) */
+/* -------------------------------
+   Domestic 묶음(목록) 전용 보정
+   : 테마 문단 max-width 완전 해제
+   ------------------------------- */
+.pub-list,
+.pub-list * {
+  max-width: none !important;   /* 테마 기본 measure 해제 */
+}
+
+.pub-list,
+.pub-list p,
+.pub-list li {
+  word-break: normal;           /* 단어 중간 강제 줄바꿈 방지 */
+  overflow-wrap: anywhere;      /* 정말 길 때만 부드럽게 줄바꿈 */
+  line-height: 1.5;
+}
+
+.pub-list > p {                 /* 항목 간 간격 */
+  margin: 0 0 12px;
+}
+
+.pub-list u { text-underline-offset: 2px; }
+.pub-list b,
+.pub-list strong { font-weight: 600; }
+
+/* -------------------------------
+   선택: 제목 2줄 말줄임 (카드 높이 균일)
+   ------------------------------- */
 .pub-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
-/* Domestic 묶음 리스트 여백 축소 */
-.pub-list > p { margin: 0 0 10px; }

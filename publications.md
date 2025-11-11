@@ -3,6 +3,7 @@ layout: single
 title: Publication
 permalink: /publications/
 author_profile: true
+classes: wide     # ← 컨테이너 폭을 넓게
 ---
 
 {% assign groups = "International|Under review|Domestic" | split:"|" %}

@@ -1,22 +1,31 @@
 ---
 ---
 
-// 테마 불러오기
+/* 테마 불러오기 */
 @import "minimal-mistakes";
 
-/* --- Publications thumbnail standard size --- */
-.pub-item { gap: 16px; }   /* 부모가 display:flex; 일 때 간격 */
+/* ================================
+   Publications 스타일 커스터마이즈
+   ================================ */
 
+/* Domestic 묶음(목록) 전용: 밑줄/볼드 미세 정리 */
+.pub-list u { text-underline-offset: 2px; }
+.pub-list b, .pub-list strong { font-weight: 600; }
+
+/* 카드 간격 (부모가 display:flex일 때 유효) */
+.pub-item { gap: 16px; }
+
+/* 썸네일 공통 규격 */
 .pub-thumb {
   width: 160px;        /* 가로 고정 */
-  aspect-ratio: 4 / 3; /* 4:3 박스 (원하면 1/1, 16/9 등으로 변경) */
-  object-fit: cover;   /* 박스에 꽉 채우고 초과분은 크롭 */
+  aspect-ratio: 4 / 3; /* 4:3 박스 (필요 시 1/1, 16/9 등으로 변경) */
+  object-fit: cover;   /* 박스에 꽉 채우고 넘치는 부분은 크롭 */
   border-radius: 6px;
   display: block;
   box-shadow: 0 0 0 1px rgba(0,0,0,.06);
 }
 
-/* 모바일에서 조금 축소 */
+/* 모바일에서 썸네일 살짝 축소 */
 @media (max-width: 600px) {
   .pub-thumb { width: 120px; }
 }

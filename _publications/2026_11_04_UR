@@ -1,0 +1,14 @@
+---
+title: "Enhanced Point Cloud Normal Estimation via Multi-Scale Geometric Feature Fusion and Attention Mechanism"
+authors: Inyoung Oh, Jinho Song, Minsung Kim, Dongho Yun, Kwanghee Ko
+venue: "Under review"
+year: 2025
+category: "Under review"
+thumbnail: /assets/images/papers/2026_CiI_rep.png
+links:
+  - { label: "abstract", url: "#" }   # url은 아무거나여도 됨. 토글이 우선됨
+abstract: >
+  This study presents an attention-guided multi-scale framework for estimating surface normals on point clouds. Neighborhood features at multiple scales are adaptively fused through an attention mechanism, and normals are directly predicted rather than reconstructed via surface fitting. To mitigate the impact of measurement noise, training targets for corrupted patches are substituted with the nearest noise-free ground-truth normals identified through a Chamfer-distance association. In addition, two lightweight geometric regularizers—a coplanarity-guided weighting term and a Z-axis alignment constraint—are incorporated to yield a balanced training objective without increasing model complexity. 
+  
+  Comprehensive evaluations on synthetic datasets demonstrate that the proposed method consistently reduces average angular error compared with the baseline. Improvements are particularly pronounced on primitive geometries such as planes, cylinders, and spheres, and are accompanied by higher precision at small angular thresholds. Evaluations on large-scale indoor scans further confirm stable and competitive performance, highlighting robustness under sensor noise and variations in sampling density. The framework exhibits consistent behavior near sharp features and curvature transitions, maintains moderate parameter count and runtime suitable for commodity hardware, and does not require auxiliary inputs such as edge detectors or resampled patches. These properties underscore its applicability to practical point cloud processing tasks requiring reliable and predictable accuracy.
+---

@@ -1,0 +1,12 @@
+---
+title: "SFD-Net: Sharp Feature Detection Network Based on Local Geometric Features"
+authors: Inyoung Oh, Kwanghee Ko
+venue: "Under review"
+year: 2025
+category: "Under review"
+thumbnail: /assets/images/papers/2025_UR2.png
+links:
+  - { label: "abstract", url: "#" }   # url은 아무거나여도 됨. 토글이 우선됨
+abstract: >
+  	Point clouds encode object shape and depth as unordered (x,y,z) samples, yet reliable detection of sharp features, defined as points where curvature changes abruptly, remains underexplored. This work introduces SFD-Net, which couples a multi-scale geometric processing pipeline with an enhanced PointNet++ backbone. Principal Component Analysis (PCA)-based normals are estimated at three scales, and second moments of their differences are aggregated to form compact descriptors that are invariant to rigid motion and scale, and robust to variations in sampling density and noise. Concatenated descriptors and coordinates are fed to an enhanced PointNet++ that inserts multi-head self-attention after the first Set Abstraction layer and after the first Feature Propagation stage, and optimization uses a class-imbalance-aware objective to emphasize the sparse sharp feature class. On the ABC benchmark, SFD-Net attains state-of-the-art (SOTA) accuracy with top F1 together with a proposed criterion (reliability index) that penalizes poor performance on either class, and qualitative results on Kinect~v2 and Stanford Large-Scale 3D Indoor Spaces (S3DIS) confirm generalization to real scans. The approach supports downstream tasks such as wireframe generation, registration, and boundary-aware semantic segmentation.
+---

@@ -15,7 +15,7 @@ author_profile: true
   {% if p.list %}
     <!-- Domestic 묶음 전용 렌더 -->
     <div class="pub-item" style="margin:18px 0;">
-      {{ p.content | markdownify }}
+      {{ p.content | markdownify | strip }}
     </div>
   {% else %}
     <div class="pub-item" style="display:flex;margin:18px 0;">
@@ -32,7 +32,7 @@ author_profile: true
         <div style="font-style:italic;margin-bottom:8px;">{{ p.venue }}{% if p.year %} ({{ p.year }}){% endif %}</div>
         {% if p.links %}
           {% for l in p.links %}
-          <a class="btn btn--primary btn--small" href="{{ l.url }}" style="margin-right:6px;">{{ l.label }}</a>
+            <a class="btn btn--primary btn--small" href="{{ l.url }}" style="margin-right:6px;">{{ l.label }}</a>
           {% endfor %}
         {% endif %}
       </div>

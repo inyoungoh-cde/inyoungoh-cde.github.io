@@ -15,7 +15,7 @@ author_profile: true
 {% if p.list %}
 <div class="pub-item" style="margin:18px 0;">
   <div class="pub-list">
-    {{ p.content | markdownify }}
+    {{ p.output }}   {# ← 여기! markdownify 쓰지 말고 출력된 HTML 사용 #}
   </div>
 </div>
 {% else %}

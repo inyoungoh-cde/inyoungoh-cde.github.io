@@ -153,8 +153,9 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
   <div class="awards-group">
     <div class="awards-title"><i class="fas fa-trophy"></i><strong>Awards</strong></div>
     <ul class="awards-list">
+      <li><strong>Best Poster Award</strong>, Korean CDE Society (2025)</li>
       <li>
-        <strong>Best Poster Award</strong>, Korean CDE Society (2025) — 
+        <strong>Best Poster Award</strong>, Korean CDE Society (2024) — 
         <a href="https://webzine.cde.or.kr/webzine/sub.html?md_no=91" target="_blank" rel="noopener">webzine</a>
       </li>
       <li><strong>Best Poster Award</strong>, Korean CDE Society (2023)</li>

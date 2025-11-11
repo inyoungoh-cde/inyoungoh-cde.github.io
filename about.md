@@ -91,3 +91,57 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
   .edu-card { padding: 16px; }
 }
 </style>
+
+## Teaching Experience
+
+<div class="teach-card">
+  <ul class="teach-list">
+    <li>
+      <div class="teach-head">
+        <i class="fas fa-calendar-check"></i>
+        <strong>2020 — Teaching Assistant, Engineering Analysis</strong>
+      </div>
+      <div class="teach-body">
+        Led weekly recitations and office hours, developed exam content, and conducted biweekly Python sessions to boost students’ problem-solving skills.
+      </div>
+    </li>
+
+    <li>
+      <div class="teach-head">
+        <i class="fas fa-calendar-check"></i>
+        <strong>2017 — Teaching Assistant, Engineering Analysis</strong>
+      </div>
+      <div class="teach-body">
+        Facilitated weekly recitations and office hours, crafted exam questions, and led biweekly MATLAB/C++ sessions to strengthen computational skills.
+      </div>
+    </li>
+
+    <li>
+      <div class="teach-head">
+        <i class="fas fa-user-friends"></i>
+        <strong>2018–Present — Mentorship Experience, Modeling and Simulation Lab</strong>
+      </div>
+      <div class="teach-body">
+        Provided one-on-one guidance over a year, overseeing data collection, lab organization, and problem-solving development that contributed to a bachelor’s thesis.
+      </div>
+    </li>
+  </ul>
+</div>
+
+<style>
+/* --- Teaching Experience cards --- */
+.teach-card{
+  background:#fff;border:1px solid rgba(0,0,0,.06);
+  border-radius:14px;padding:18px 20px;margin-top:.6rem;
+  box-shadow:0 1px 0 rgba(0,0,0,.06),0 2px 10px rgba(0,0,0,.04);
+}
+.teach-list{margin:0;padding-left:1.1rem;}
+.teach-list>li{margin:.65rem 0;}
+.teach-head{font-size:1.02rem;font-weight:600;display:flex;gap:.5rem;align-items:center;}
+.teach-head i{color:#5b7cff;}
+.teach-body{margin:.25rem 0 0 .1rem;line-height:1.55;}
+@media (max-width:600px){
+  .teach-card{padding:16px;}
+}
+</style>
+

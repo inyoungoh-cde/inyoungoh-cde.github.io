@@ -63,7 +63,7 @@ Minsung Kim, <u>Inyoung Oh</u>, Daewoon Kim, Jihoon Park, Kwanghee Ko
 <u>Inyoung Oh</u>, Daewoon Kim, Jinho Song, Jihoon Park, Moongu Son, Junsang Yun, Gilsang Jang, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2020*
 
-**Analysis of Plane Normal-Vector Estimation and Deep-Learning–Based Selection of Parameter *k***  
+<span class="pill-award">🏆 Best Poster Award</span> **Analysis of Plane Normal-Vector Estimation and Deep-Learning–Based Selection of Parameter *k***  
 <u>Inyoung Oh</u>, Junhee Lee, Daewoon Kim, Jihoon Park, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2020*
 

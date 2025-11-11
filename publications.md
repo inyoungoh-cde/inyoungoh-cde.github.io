@@ -3,7 +3,7 @@ layout: single
 title: Publication
 permalink: /publications/
 author_profile: true
-classes: wide     # 컨테이너 폭을 넓게
+classes: wide
 ---
 
 {% assign groups = "International|Under review|Domestic" | split:"|" %}
@@ -12,49 +12,79 @@ classes: wide     # 컨테이너 폭을 넓게
 {:.archive__subtitle}
 
 {% assign pubs = site.publications | where:"category", g | sort:"year" | reverse %}
-
-<div class="pub-grid">
 {% for p in pubs %}
 
-  {% if p.list %}
-  <!-- 묶음형(Domestic 한 파일) : 한 칸 카드로 출력 -->
-  <div class="pub-card pub-card--list">
-    <div class="pub-list">
-      {{ p.output | default: p.content }}
-    </div>
+{% if p.list %}
+{::nomarkdown}
+<div class="pub-item" style="margin:18px 0;">
+  <div class="pub-list">
+    {{ p.output }}
   </div>
-
-  {% else %}
-  <!-- 일반 카드 -->
-  <div class="pub-card">
-    {% if p.thumbnail %}
-      <a href="{{ p.links[0].url | default: '#' }}">
-        <img class="pub-thumb" src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy">
-      </a>
-    {% endif %}
-
-    <div>
-      <div class="pub-title">{{ p.title }}</div>
-      <div class="pub-authors">{{ p.authors }}</div>
-      <div class="pub-venue">
-        {{ p.venue }}{% if p.year %} ({{ p.year }}){% endif %}
-      </div>
-
-      {% if p.links %}
-      <div class="pub-actions">
-        {% for l in p.links %}
-          <a class="btn btn--primary btn--small" href="{{ l.url }}">{{ l.label }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
+</div>
+{:/}
+{% else %}
+{::nomarkdown}
+{% assign pid = p.title | slugify %}
+<div class="pub-item" style="display:flex;margin:18px 0;">
+  {% if p.thumbnail %}
+  <div style="flex:0 0 160px;">
+    <img class="pub-thumb" src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy">
   </div>
   {% endif %}
 
-{% endfor %}
+  <div style="flex:1;margin-left:16px;">
+    <div class="pub-title" style="font-weight:600;margin-bottom:6px;">{{ p.title }}</div>
+    <div class="pub-authors" style="margin-bottom:4px;">{{ p.authors }}</div>
+    <div class="pub-venue" style="font-style:italic;margin-bottom:8px;">
+      {{ p.venue }}{% if p.year %} ({{ p.year }}){% endif %}
+    </div>
+
+    <div class="pub-actions">
+      {% if p.abstract %}
+      <button class="btn btn--primary btn--small abs-toggle"
+              type="button"
+              data-target="abs-{{ pid }}"
+              aria-expanded="false">abstract</button>
+      {% endif %}
+      {% if p.links %}
+        {% for l in p.links %}
+          <a class="btn btn--primary btn--small" href="{{ l.url }}" style="margin-right:6px;">{{ l.label }}</a>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    {% if p.abstract %}
+    <div id="abs-{{ pid }}" class="abs-panel" hidden>
+      {{ p.abstract | markdownify }}
+    </div>
+    {% endif %}
+  </div>
 </div>
+{:/}
+{% endif %}
+
+{% endfor %}
 
 {% unless forloop.last %}
 <hr style="margin:24px 0;">
 {% endunless %}
 {% endfor %}
+
+{::nomarkdown}
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.abs-toggle');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var id = btn.getAttribute('data-target');
+      var panel = document.getElementById(id);
+      if (!panel) return;
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      panel.hidden = expanded;
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.textContent = expanded ? 'abstract' : 'hide abstract';
+    });
+  });
+})();
+</script>
+{:/}

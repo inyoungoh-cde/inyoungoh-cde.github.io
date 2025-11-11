@@ -24,7 +24,7 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
     </div>
     <div class="edu-school"><strong>Gwangju Institute of Science and Technology (GIST), Gwangju, Republic of Korea</strong></div>
     <ul class="edu-list">
-      <li>Department: Mechanical and Robotics Engineering</li>
+      <li>Major: Mechanical and Robotics Engineering</li>
       <li>Advisor: Prof. Kwanghee Ko</li>
       <li>GPA: 4.2 / 4.5</li>
       <li><em>Expected Graduation: February 2026</em></li>

@@ -27,7 +27,7 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
       <li>Department: Mechanical and Robotics Engineering</li>
       <li>Advisor: Prof. Kwang Hee Ko</li>
       <li>GPA: 4.2 / 4.5</li>
-      <li><em>Expected Graduation: August 2025</em></li>
+      <li><em>Expected Graduation: February 2026</em></li>
       <li>Thesis: “Normal Vector Estimation, and Semantic Segmentation of 3D Point Clouds using Deep Learning and Geometric Analysis”</li>
     </ul>
   </div>

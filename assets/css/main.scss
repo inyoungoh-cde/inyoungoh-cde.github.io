@@ -100,3 +100,21 @@
 .abs-panel p { margin: 0 0 8px; }
 .pub-abs p:last-child,
 .abs-panel p:last-child { margin-bottom: 0; }
+
+/* --- FIX: Domestic 묶음 카드는 1열로(썸네일 없음) --- */
+.pub-card--list {
+  grid-template-columns: 1fr !important;   /* 2열 → 1열 */
+}
+.pub-card--list .pub-list {
+  grid-column: 1 / -1;                     /* 전체 폭 사용 */
+}
+
+/* 테마가 거는 문단 최대폭 제한 해제(혹시 모를 잔재 차단) */
+.page .page__content .pub-card--list .pub-list,
+.page .page__content .pub-card--list .pub-list * {
+  max-width: none !important;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.page .page__content .pub-card--list .pub-list > p { margin: 0 0 12px; }

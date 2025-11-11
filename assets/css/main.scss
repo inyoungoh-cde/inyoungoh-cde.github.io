@@ -80,3 +80,22 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* ===============================
+   Abstract 토글 패널 (신규)
+   =============================== */
+
+.abs-panel{
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: rgba(0,0,0,.04);
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.06);
+  line-height: 1.55;
+}
+
+.abs-panel p { margin: 0 0 8px; }
+.abs-panel p:last-child { margin-bottom: 0; }
+
+/* abstract / paper / video 버튼 간격 */
+.pub-actions .btn { margin-right: 6px; margin-top: 6px; }

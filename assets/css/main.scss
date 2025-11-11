@@ -1,7 +1,7 @@
 ---
 ---
 
-/* 테마 불러오기 */
+// 테마 불러오기
 @import "minimal-mistakes";
 
 /* ================================
@@ -12,14 +12,14 @@
 .pub-list u { text-underline-offset: 2px; }
 .pub-list b, .pub-list strong { font-weight: 600; }
 
-/* 카드 간격 (부모가 display:flex일 때 유효) */
+/* (레거시) 카드 간격: 부모가 display:flex일 때 유효 */
 .pub-item { gap: 16px; }
 
 /* 썸네일 공통 규격 */
 .pub-thumb {
   width: 160px;        /* 가로 고정 */
-  aspect-ratio: 4 / 3; /* 4:3 박스 (필요 시 1/1, 16/9 등으로 변경) */
-  object-fit: cover;   /* 박스에 꽉 채우고 넘치는 부분은 크롭 */
+  aspect-ratio: 4 / 3; /* 4:3 박스 */
+  object-fit: cover;   /* 박스에 꽉 채우고 초과분은 크롭 */
   border-radius: 6px;
   display: block;
   box-shadow: 0 0 0 1px rgba(0,0,0,.06);
@@ -28,4 +28,46 @@
 /* 모바일에서 썸네일 살짝 축소 */
 @media (max-width: 600px) {
   .pub-thumb { width: 120px; }
+}
+
+/* ---------- Publications: dense two-column layout ---------- */
+
+/* 페이지 전체 타이포 살짝 압축(카드 내부만) */
+.page__content .pub-card { font-size: 0.97rem; }
+
+/* 2열 그리드 (<=900px에서는 1열) */
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 24px;
+}
+@media (max-width: 900px) { .pub-grid { grid-template-columns: 1fr; } }
+
+/* 카드 본체: 썸네일 + 본문 2열 */
+.pub-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+/* 텍스트 블록 간 간격 줄이기 */
+.pub-title   { font-weight: 600; line-height: 1.25; margin: 0 0 4px; }
+.pub-authors { margin: 0 0 2px; }
+.pub-venue   { font-style: italic; margin: 0 0 6px; color: var(--mm-muted, #666); }
+
+/* 버튼 묶음 */
+.pub-actions .btn { margin-right: 6px; margin-top: 2px; }
+
+/* Domestic 묶음 리스트도 여백 축소 */
+.pub-list > p { margin: 0 0 10px; }
+
+/* (선택) 제목 2줄 말줄임으로 카드 높이 균일화 */
+.pub-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

@@ -11,7 +11,20 @@ classes: wide
 ### {{ g }}
 {:.archive__subtitle}
 
-{% assign pubs = site.publications | where:"category", g | sort:"year" | reverse %}
+{%- comment -%}
+  robust filter:
+  - category == g (대소문자/공백 무시)
+  - 또는 categories 배열에 g 포함
+{%- endcomment -%}
+{% assign pubs = site.publications | where_exp: "p",
+  "(
+      p.category and
+      (p.category | strip | downcase) == (g | strip | downcase)
+   ) or (
+      p.categories and
+      (p.categories | join: '||' | downcase) contains (g | strip | downcase)
+   )"
+%}
 
 <div class="pub-grid">
 {% for p in pubs %}
@@ -81,12 +94,7 @@ classes: wide
     const abs  = card && card.querySelector('.pub-abs');
     if (!abs) return;
     const isOpen = !abs.hasAttribute('hidden');
-    if (isOpen) {
-      abs.setAttribute('hidden','');
-      e.target.textContent = 'abstract';
-    } else {
-      abs.removeAttribute('hidden');
-      e.target.textContent = 'hide abstract';
-    }
+    if (isOpen) { abs.setAttribute('hidden',''); e.target.textContent = 'abstract'; }
+    else       { abs.removeAttribute('hidden');  e.target.textContent = 'hide abstract'; }
   });
 </script>

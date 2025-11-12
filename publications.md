@@ -6,39 +6,13 @@ author_profile: true
 classes: wide
 ---
 
-{%- comment -%}
-원하는 표기 순서. 실제 문서에 해당 카테고리가 없어도 안전.
-{%- endcomment -%}
-{% assign desired = "International|Under review|Domestic|Patents" | split:"|" %}
-
-{%- comment -%}
-실제 존재하는 카테고리(공백/대문자 섞여도 OK) 수집
-{%- endcomment -%}
-{% assign seen = site.publications | map: 'category' | compact | uniq %}
-
-{%- comment -%}
-desired + seen을 합쳐 중복 제거 → 실제 루프 순서 확보
-{%- endcomment -%}
-{% assign groups = desired | concat: seen | uniq %}
+{% assign groups = "International|Under review|Domestic|Patents" | split:"|" %}
 
 {% for g in groups %}
 ### {{ g }}
 {:.archive__subtitle}
 
-{%- comment -%}
-견고 필터: 
-- p.category 가 g 와(공백 제거·소문자) 같거나
-- p.categories(배열)에 g 가 포함되어 있으면 통과
-{%- endcomment -%}
-{% assign pubs = site.publications | where_exp: "p",
-  "(
-      p.category and
-      (p.category | strip | downcase) == (g | strip | downcase)
-   ) or (
-      p.categories and
-      (p.categories | join: '||' | downcase) contains (g | strip | downcase)
-   )"
-%}
+{% assign pubs = site.publications | where: "category", g | sort: "year" | reverse %}
 
 <div class="pub-grid">
 {% for p in pubs %}

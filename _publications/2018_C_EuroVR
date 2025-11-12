@@ -1,0 +1,10 @@
+---
+title: "Automatic detection of cylindrical objects from unorganized point cloud"
+authors: Inyoung Oh, Kwanghee Ko
+venue: "EuroVR"
+year: 2018
+category: "International"
+thumbnail: /assets/images/papers/2018_C_eurovr.png
+abstract: >
+  Extracting a 3D primitive geometric shape such as a sphere and a cylinder from a point cloud is an im- portant research topic. Especially, most of CAD models are composed of such primitives, and extraction of geometric parameters of each primitive plays a key role in reverse engineering and registration. Among the primitives, cylinders are frequently used in practice to represent pipe-like objects. Recently, there are various methods for detecting multiple cylindrical objects from an unorganized point cloud, but they still have a limi- tation of detecting multiple cylinders and the elbow parts where two cylinders are connected. In this work, we present an automated robust method of detecting any types of multiple cylindrical objects from an unorganized point cloud and estimating a complete pipe structure consisting of multiple cylinders. We focus on a method of extracting a parabolic patch at each point using the points in the neighborhood and computing a radius from the patch to consider a virtual sphere of that radius at that point. We compute such spheres at all the other points and trace the centroids of the detected virtual spheres to find the axis of each cylinder. The orientation of the axis of the cylinder is computed from the mean-filtered centroids. Each cylinder is separately obtained, and the joints of the cylinders are estimated to form a complete pipe. The proposed method is tested with various examples.
+---

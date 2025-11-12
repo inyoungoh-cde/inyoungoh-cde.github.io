@@ -66,8 +66,8 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
   "not (
      (p.category and (p.category | downcase) == 'domestic') or
      (p.categories and (p.categories | join: '||' | downcase) contains 'domestic') or
-     (p.category and (p.category | downcase) == 'patents registered') or
-     (p.categories and (p.categories | join: '||' | downcase) contains 'patents registered')
+     (p.category and (p.category | downcase) == 'patents') or
+     (p.categories and (p.categories | join: '||' | downcase) contains 'patents')
   )"
   | slice: 0, 4 %}
 

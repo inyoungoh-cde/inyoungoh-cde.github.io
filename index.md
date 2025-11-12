@@ -61,9 +61,11 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
 
 ## Recent Publications
 {::nomarkdown}
-{% assign recents_all = site.publications | sort: "year" | reverse %}
-{% assign recents = recents_all
-  | where_exp: "p", "p.category and p.category != 'Domestic' and p.category != 'Patents'"
+{% assign recents = site.publications
+  | sort: "year" | reverse
+  | where_exp: "p", "p.category"                  # category가 있는 항목만
+  | where_exp: "p", "p.category != 'Domestic'"    # Domestic 제외
+  | where_exp: "p", "p.category != 'Patents'"     # Patents 제외
   | slice: 0, 4 %}
 
 {% for p in recents %}
@@ -92,4 +94,5 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
 {:/}
 
 [See all publications →](/publications/)
+
 

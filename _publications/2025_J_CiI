@@ -1,0 +1,12 @@
+---
+title: "A Mixed Reality-based Remote Collaboration Framework Using Improved Pose Estimation"
+authors: <u>Inyoung Oh</u>, Gilsang Jang, Jinho Song, Moongu Son, Daewoon Kim, Junsang Yun, Kwanghee Ko
+venue: "Computers in Industry"
+year: 2025
+category: "International"
+thumbnail: /assets/images/papers/2025_J_CiI.png
+abstract: >
+  Mixed Reality (MR) technology integrates digital content with the real world to enable a cohesive user experience. Accurate pose estimation is crucial for aligning virtual content with physical surroundings, ensuring the virtual elements appear naturally in the user’s environment. This paper proposes a learning-based approach for accurate pose estimation using a monocular \textit{\color{red} Red-Green-Blue (RGB)} image, eliminating the need for markers and depth sensors. The method leverages \textit{\color{red} You Only Look Once Six-Dimensional (YOLO6D)} and a RoI (Region of Interest)-based color augmentation technique combined with PCA (Principal Component Analysis) to enhance the accuracy of 6-DoF (Degrees of Freedom) pose estimation, while mitigating the effects of background variations and lighting changes. The proposed pose estimation method is incorporated into an MR-based remote collaboration framework, ensuring consistent and robust information rendering onto target objects across various devices. This integration enhances the reliability and effectiveness of MR-based remote collaboration. Experimental results demonstrate the superior performance of the proposed method, establishing it as a strong foundation for future MR-based remote collaboration frameworks.
+links:
+  - { label: "paper",   url: "" }
+---

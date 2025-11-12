@@ -6,7 +6,7 @@ author_profile: true
 classes: wide
 ---
 
-{% assign groups = "International|Under review|Domestic" | split:"|" %}
+{% assign groups = "International|Under review|Domestic|Patents Registered" | split:"|" %}
 {% for g in groups %}
 ### {{ g }}
 {:.archive__subtitle}
@@ -17,7 +17,7 @@ classes: wide
 {% for p in pubs %}
 
   {% if p.list %}
-  <!-- Domestic 묶음: 한 칸 카드로 그대로 렌더 -->
+  <!-- 묶음: 한 칸 카드로 그대로 렌더 -->
   <article class="pub-card pub-card--list">
     <div class="pub-list">
       {{ p.output | default: p.content }}
@@ -25,7 +25,7 @@ classes: wide
   </article>
 
   {% else %}
-  <!-- 일반 카드: 썸네일 + 본문 2열 -->
+  <!-- 일반 카드 -->
   <article class="pub-card">
     {% if p.thumbnail %}
       <a class="pub-thumb-wrap" href="{{ p.links[0].url | default: '#' }}">

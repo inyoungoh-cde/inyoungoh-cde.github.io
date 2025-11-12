@@ -60,33 +60,33 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
 ---
 
 ## Recent Publications
-{%- assign recents_all = site.publications | sort:"year" | reverse -%}
-{%- assign recents = recents_all
-   | where_exp:"p","p.category != 'Domestic'"
-   | slice: 0, 4 -%}
+{::nomarkdown}
+{% assign recents_all = site.publications | sort:"year" | reverse %}
+{% assign recents = recents_all | where_exp:"p","p.category != 'Domestic'" | slice: 0, 4 %}
 
-{%- for p in recents -%}
+{% for p in recents %}
 <div class="pub-item" style="display:flex;margin:18px 0;">
-  {%- if p.thumbnail -%}
+  {% if p.thumbnail %}
   <div style="flex:0 0 160px;">
     <a href="{{ p.links[0].url | default: '#' }}">
       <img class="pub-thumb" src="{{ p.thumbnail }}" alt="{{ p.title }}" loading="lazy">
     </a>
   </div>
-  {%- endif -%}
+  {% endif %}
   <div style="flex:1;margin-left:16px;">
     <div style="font-weight:600;margin-bottom:6px;">{{ p.title }}</div>
     <div style="margin-bottom:4px;">{{ p.authors }}</div>
     <div style="font-style:italic;margin-bottom:8px;">
       {{ p.venue }}{% if p.year %} ({{ p.year }}){% endif %}
     </div>
-    {%- if p.links -%}
-      {%- for l in p.links -%}
+    {% if p.links %}
+      {% for l in p.links %}
         <a class="btn btn--primary btn--small" href="{{ l.url }}" style="margin-right:6px;">{{ l.label }}</a>
-      {%- endfor -%}
-    {%- endif -%}
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
-{%- endfor -%}
+{% endfor %}
+{:/}
 
 [See all publications →](/publications/)

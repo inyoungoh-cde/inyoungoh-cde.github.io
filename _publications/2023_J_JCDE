@@ -1,0 +1,12 @@
+---
+title: "Improved semantic segmentation network using normal vector guidance for LiDAR point clouds"
+authors: Minsung Kim, <u>Inyoung Oh</u>, Dongho Yun, Kwanghee Ko
+venue: "Journal of Computational Design and Engineering"
+year: 2023
+category: "International"
+thumbnail: /assets/images/papers/2023_J_JCDE.png
+abstract: >
+  As Light Detection and Ranging (LiDAR) sensors become increasingly prevalent in the field of autonomous driving, the need for accurate semantic segmentation of three-dimensional points grows accordingly. To address this challenge, we propose a novel network model that enhances segmentation performance by utilizing normal vector information. Firstly, we present a method to improve the accuracy of normal estimation by using the intensity and reflection angles of the light emitted from the LiDAR sensor. Secondly, we introduce a novel local feature aggregation module that integrates normal vector information into the network to improve the performance of local feature extraction. The normal information is closely related to the local structure of the shape of an object, which helps the network to associate unique features with corresponding objects. We propose four different structures for local feature aggregation, evaluate them, and choose the one that shows the best performance. Experiments using the SemanticKITTI dataset demonstrate that the proposed architecture outperforms both the baseline models, RandLA-Net, and other existing methods, achieving mean intersection over union of 57.9%. Furthermore, it shows highly competitive performance compared with RandLA-Net for small and dynamic objects in a real road environment. For example, it yielded 95.2% for cars, 47.4% for bicycles, 41.0% for motorcycles, 57.4% for bicycles, and 53.2% for pedestrians.
+links:
+  - { label: "paper",   url: "http://dx.doi.org/10.1093/jcde/qwad102" }
+---

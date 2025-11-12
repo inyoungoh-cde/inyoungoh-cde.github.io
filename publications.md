@@ -9,7 +9,7 @@ classes: wide
 {%- comment -%}
 원하는 표기 순서. 실제 문서에 해당 카테고리가 없어도 안전.
 {%- endcomment -%}
-{% assign desired = "International|Under review|Domestic|Patents Registered" | split:"|" %}
+{% assign desired = "International|Under review|Domestic|Patents" | split:"|" %}
 
 {%- comment -%}
 실제 존재하는 카테고리(공백/대문자 섞여도 OK) 수집

@@ -7,9 +7,9 @@ list: true
 
 <div class="pub-list" markdown="1">
 
-1. **Automated System for Detecting 3D Pipeline**  
-   Kwanghee Ko, <u>Inyoung Oh</u>  
-   Registration No.: 10-2135828-0000 (July 08, 2020); Technology Transfer \$2,000.
+**Automated System for Detecting 3D Pipeline**
+Kwanghee Ko, <u>Inyoung Oh</u>
+Registration No.: 10-2135828-0000 (July 08, 2020); Technology Transfer \$2,000.
 
 <!-- 필요하면 항목을 계속 추가 -->
 </div>

@@ -7,11 +7,11 @@ list: true
 
 <div class="pub-list" markdown="1">
 
-<span class="pill-award">[🏆 Best Poster Award]</span>**Enhanced Boundary-Aware Semantic Segmentation via Deep Learning and Geometric Analysis**  
+<span class="pill-award">[🏆 Best Poster Award]</span> **Enhanced Boundary-Aware Semantic Segmentation via Deep Learning and Geometric Analysis**  
 <u>Inyoung Oh</u>, Minsung Kim, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2025*
 
-<span class="pill-award">[🏆 Best Poster Award]</span>**Deep-Learning–Based Camera Pose Estimation and Mixed Reality Using Smart Glasses**  
+<span class="pill-award">[🏆 Best Poster Award]</span> **Deep-Learning–Based Camera Pose Estimation and Mixed Reality Using Smart Glasses**  
 <u>Inyoung Oh</u>, Minsung Kim, Gilsang Jang, Junsang Yun, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2024*
 
@@ -23,7 +23,7 @@ Junsang Yun, Gilsang Jang, <u>Inyoung Oh</u>, Jinho Song, Daewoon Kim, Kwanghee 
 Gilsang Jang, Jinho Song, <u>Inyoung Oh</u>, Moongu Son, Daewoon Kim, Junsang Yun, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2023*
 
-<span class="pill-award">[🏆 Best Poster Award]</span>**Robust Object Recognition and Pose Estimation Under Occlusion Using Deep Learning**  
+<span class="pill-award">[🏆 Best Poster Award]</span> **Robust Object Recognition and Pose Estimation Under Occlusion Using Deep Learning**  
 <u>Inyoung Oh</u>, Gilsang Jang, Junsang Yun, Moongu Son, Jinho Song, Daewoon Kim, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2023*
 
@@ -43,11 +43,11 @@ Jinho Song, <u>Inyoung Oh</u>, Gilsang Jang, Kwanghee Ko
 <u>Inyoung Oh</u>, Jinho Song, Gilsang Jang, Moongu Son, Daewoon Kim, Kwanghee Ko  
 *The Korea Information Technology Society (KITS) Fall Conference 2022*
 
-<span class="pill-award">[🏆 Best Paper Award]</span>**Generating Synthetic Training Datasets to Improve 6-DoF Pose Estimation Across Lighting Conditions**  
+<span class="pill-award">[🏆 Best Paper Award]</span> **Generating Synthetic Training Datasets to Improve 6-DoF Pose Estimation Across Lighting Conditions**  
 Gilsang Jang, Moongu Son, Junsang Yun, <u>Inyoung Oh</u>, Jinho Song, Kwanghee Ko  
 *The Korea Information Technology Society (KITS) Fall Conference 2022*
 
-<span class="pill-award">[🏆 Best Poster Award]</span>**A Synthetic-Dataset Generation Framework for Training 6-DoF Pose Estimation Networks**  
+<span class="pill-award">[🏆 Best Poster Award]</span> **A Synthetic-Dataset Generation Framework for Training 6-DoF Pose Estimation Networks**  
 Gilsang Jang, Moongu Son, <u>Inyoung Oh</u>, Daewoon Kim, Jinho Song, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2022*
 
@@ -55,7 +55,7 @@ Gilsang Jang, Moongu Son, <u>Inyoung Oh</u>, Daewoon Kim, Jinho Song, Kwanghee K
 Minsung Kim, <u>Inyoung Oh</u>, Daewoon Kim, Jihoon Park, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2021*
 
-<span class="pill-award">[🏆 Best Poster Award]</span>**Object-Detection-Based 3D LiDAR Intensity Calibration and Real-Time Detection of Clustered Object Candidates Using Deep Learning**  
+<span class="pill-award">[🏆 Best Poster Award]</span> **Object-Detection-Based 3D LiDAR Intensity Calibration and Real-Time Detection of Clustered Object Candidates Using Deep Learning**  
 <u>Inyoung Oh</u>, Minsung Kim, Moongu Son, Gilsang Jang, Junsang Yun, Jinho Song, Daewoon Kim, Kwanghee Ko  
 *Society for Computational Design and Engineering (CDE) Conference 2021*
 

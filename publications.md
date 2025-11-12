@@ -6,15 +6,29 @@ author_profile: true
 classes: wide
 ---
 
-{% assign groups = "International|Under review|Domestic|Patents Registered" | split:"|" %}
+{%- comment -%}
+원하는 표기 순서. 실제 문서에 해당 카테고리가 없어도 안전.
+{%- endcomment -%}
+{% assign desired = "International|Under review|Domestic|Patents Registered" | split:"|" %}
+
+{%- comment -%}
+실제 존재하는 카테고리(공백/대문자 섞여도 OK) 수집
+{%- endcomment -%}
+{% assign seen = site.publications | map: 'category' | compact | uniq %}
+
+{%- comment -%}
+desired + seen을 합쳐 중복 제거 → 실제 루프 순서 확보
+{%- endcomment -%}
+{% assign groups = desired | concat: seen | uniq %}
+
 {% for g in groups %}
 ### {{ g }}
 {:.archive__subtitle}
 
 {%- comment -%}
-  robust filter:
-  - category == g (대소문자/공백 무시)
-  - 또는 categories 배열에 g 포함
+견고 필터: 
+- p.category 가 g 와(공백 제거·소문자) 같거나
+- p.categories(배열)에 g 가 포함되어 있으면 통과
 {%- endcomment -%}
 {% assign pubs = site.publications | where_exp: "p",
   "(
@@ -30,7 +44,6 @@ classes: wide
 {% for p in pubs %}
 
   {% if p.list %}
-  <!-- 묶음: 한 칸 카드로 그대로 렌더 -->
   <article class="pub-card pub-card--list">
     <div class="pub-list">
       {{ p.output | default: p.content }}
@@ -38,7 +51,6 @@ classes: wide
   </article>
 
   {% else %}
-  <!-- 일반 카드 -->
   <article class="pub-card">
     {% if p.thumbnail %}
       <a class="pub-thumb-wrap" href="{{ p.links[0].url | default: '#' }}">
@@ -59,7 +71,6 @@ classes: wide
         {% if p.abstract and p.abstract != "" %}
           <button class="btn btn--primary btn--small js-abs-toggle" type="button">abstract</button>
         {% endif %}
-
         {% if p.links %}
           {% for l in p.links %}
             {% assign lab = l.label | downcase %}

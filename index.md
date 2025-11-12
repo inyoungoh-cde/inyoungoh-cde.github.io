@@ -62,7 +62,15 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
 ## Recent Publications
 {::nomarkdown}
 {% assign recents_all = site.publications | sort:"year" | reverse %}
-{% assign recents = recents_all | where_exp:"p","p.category != 'Domestic' and p.category != 'Patents Registered'" | slice: 0, 4 %}
+{%- assign recents = recents_all | where_exp:"p",
+  "not (
+     (p.category and (p.category | downcase) == 'domestic') or
+     (p.categories and (p.categories | join: '||' | downcase) contains 'domestic') or
+     (p.category and (p.category | downcase) == 'patents registered') or
+     (p.categories and (p.categories | join: '||' | downcase) contains 'patents registered')
+  )"
+  | slice: 0, 4
+-%}
 
 {% for p in recents %}
 <div class="pub-item" style="display:flex;margin:18px 0;">
@@ -88,5 +96,6 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
 </div>
 {% endfor %}
 {:/}
+
 
 [See all publications →](/publications/)

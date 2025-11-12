@@ -182,20 +182,18 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
     </ul>
   </div>
 
-</div>
-
-<!-- Patents -->
-<div class="awards-group">
-  <div class="awards-title">
-    <i class="fas fa-lightbulb"></i><strong>Patents Registered</strong>
+  <!-- Patents (같은 카드 안에 배치) -->
+  <div class="awards-group">
+    <div class="awards-title"><i class="fas fa-lightbulb"></i><strong>Patents Registered</strong></div>
+    <ol class="awards-list patent-list">
+      <li>
+        <strong>Automated System for Detecting 3D Pipeline</strong><br>
+        Kwanghee Ko, <u>Inyoung Oh</u><br>
+        Registration No.: 10-2135828-0000 (July 08, 2020); Technology Transfer $2,000.
+      </li>
+    </ol>
   </div>
-  <ol class="awards-list patent-list">
-    <li>
-      <strong>Automated System for Detecting 3D Pipeline</strong><br>
-      Kwanghee Ko, <u>Inyoung Oh</u><br>
-      Registration No.: 10-2135828-0000 (July 08, 2020); Technology Transfer $2,000.
-    </li>
-  </ol>
+
 </div>
 
 

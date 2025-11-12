@@ -1,6 +1,6 @@
 ---
 title: "Patents (Whole)"
-category: "Patents Registered"
+category: "Patents"
 year: 2025
 list: true
 ---

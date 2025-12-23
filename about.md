@@ -169,7 +169,7 @@ I will receive my Ph.D. from the School of Integrated Technology at GIST, advise
     <ul class="awards-list">
       <li>
         <strong>Outstanding PhD Student RA Scholarship</strong>, GIST 
-        <span class="muted">— 2018, 2019, 2020, 2021, 2023</span>
+        <span class="muted">— 2018, 2019, 2020, 2021, 2023, 2025</span>
       </li>
       <li>
         <strong>GIST Scholarship (Government support – Doctoral studies)</strong>

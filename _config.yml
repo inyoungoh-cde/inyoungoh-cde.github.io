@@ -28,7 +28,7 @@ author:
       url: "mailto:iyohcde@gmail.com"
       icon: "fas fa-envelope"
     - label: "Google Scholar"
-      url: "https://scholar.google.co.kr/citations?hl=ko&user=e3h5YtAAAAAJ&view_op=list_works&sortby=pubdate"
+      url: "https://scholar.google.co.kr/citations?hl=en&user=e3h5YtAAAAAJ&view_op=list_works&sortby=pubdate"
       icon: "fas fa-graduation-cap"   # <- 안 보이면 'fas fa-graduation-cap'로  ai ai-google-scholar
     - label: "GitHub"
       url: "https://github.com/inyoungoh-cde"

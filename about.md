@@ -5,9 +5,9 @@ permalink: /about/
 author_profile: true
 ---
 
-Hi! I am a Ph.D. candidate in the [School of Mechanical and Robotic Engineering](https://me.gist.ac.kr/meeng/index.do){:target="_blank" rel="noopener"} at [GIST](https://www.gist.ac.kr/en/main.html){:target="_blank" rel="noopener"}, Republic of Korea. My research focuses on understanding human and robot perception of 2D and 3D environments, developing geometry-informed deep learning methods, integrating analytic geometric priors with modern neural architectures, and designing AR/VR/MR remote-collaboration platforms.
+Hi! I am a Ph.D. candidate in the [School of Mechanical and Robotic Engineering](https://me.gist.ac.kr/meeng/index.do){:target="_blank" rel="noopener"} at [GIST](https://www.gist.ac.kr/en/main.html){:target="_blank" rel="noopener"}, Republic of Korea. My research focuses on understanding human and robotic perception of 2D and 3D environments, developing geometry-informed deep learning methods, integrating analytic geometric priors with modern neural architectures, and designing AR/VR/MR remote-collaboration platforms.
 
-I study the practical obstacles people face in 2D and 3D tasks and build geometry-informed AI systems that genuinely help them. By combining modern deep learning with explicit geometric structure, I aim to deliver AR, VR, and MR platforms that are reliable, efficient, and easy to use in everyday collaboration.
+I study the practical obstacles humans and robots face in 2D and 3D tasks and build geometry-informed AI systems that genuinely help them. By combining modern deep learning with explicit geometric structure, I aim to deliver AR, VR, and MR platforms that are reliable, efficient, and easy to use in real-world collaboration.
 
 I will receive my Ph.D. from the School of Mechanical and Robotic Engineering at GIST, advised by Prof. Kwanghee Ko in the [MODSIM](https://me.gist.ac.kr/modsim/){:target="_blank" rel="noopener"} Lab, at the Winter Commencement Ceremony in February 2026.
 

@@ -20,7 +20,7 @@ collections:
 # 사이드바·프로필 기본값
 author:
   name: "Inyoung Oh"
-  avatar: "/assets/images/profile.jpg"
+  avatar: "/assets/images/profile.JPG"
   bio: "2D/3D Vision · Spatial Intelligence · CAD/CAM/CAE · Geometric Modeling · Mixed & Extended Reality"
   location: "GIST, Republic of Korea"
   links:

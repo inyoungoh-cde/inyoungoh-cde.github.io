@@ -6,11 +6,20 @@ author_profile: true
 toc: false
 ---
 
-Hi! I am a Ph.D. candidate in the [Department of Mechanical and Robotics Engineering](https://me.gist.ac.kr/meeng/index.do){:target="_blank" rel="noopener"} at [GIST](https://www.gist.ac.kr/en/main.html){:target="_blank" rel="noopener"}, Republic of Korea. My research focuses on understanding human perception of 2D and 3D environments, developing geometry-based deep learning methods, integrating analytic geometric priors with modern neural architectures, and designing AR/VR/MR remote-collaboration platforms.
+Hi! I’m Inyoung Oh, a Ph.D. candidate in [School of Mechanical and Robotic Engineering](https://me.gist.ac.kr/meeng/index.do){:target="_blank" rel="noopener"} at [Gwangju Institute of Science and Technology (GIST)](https://www.gist.ac.kr/en/main.html){:target="_blank" rel="noopener"}, Republic of Korea (Ph.D. awarded Feb 2026), advised by Prof. Kwanghee Ko in the [MODSIM](https://me.gist.ac.kr/modsim/){:target="_blank" rel="noopener"} Lab.
 
-I study the practical obstacles people face in 2D and 3D tasks and build geometry-informed AI systems that genuinely help them. By combining modern deep learning with explicit geometric structure, I aim to deliver AR, VR, and MR platforms that are reliable, efficient, and easy to use in day-to-day collaboration.
+My research proposes Geometry-Aware Deep Learning as an efficient and principled approach to 3D vision. A core challenge in 3D perception is that real-world sensory data is sparse and irregular, especially for point clouds. While many approaches rely on scaling up model size, I focus on integrating geometric structure so that perception systems remain robust and deployable on robots and mobility platforms.
 
-I will receive my Ph.D. from the School of Integrated Technology at GIST, advised by Prof. Kwanghee Ko in the [MODSIM](https://me.gist.ac.kr/modsim/){:target="_blank" rel="noopener"} Lab, with the degree to be awarded at the Winter Commencement Ceremony in February 2026.
+My work can be organized into three directions:
+1) Explicit Geometric Reasoning: incorporating classical geometric reasoning to interpret 3D structures.
+2) Geometry-Guided Perception: hybrid learning that uses geometric cues to guide representation learning and prediction.
+3) Robust Real-world Application: building systems that remain stable under noise, missing data, and varying sampling patterns.
+
+Across these directions, I have developed geometry-informed methods for sharp feature detection (SFD-Net), surface normal estimation, and normal-guided LiDAR semantic segmentation. I also work on 2D image-based 6-DoF pose estimation and deploy it in mixed reality remote collaboration systems.
+
+Ultimately, my goal is to endow computer systems such as robots, autonomous vehicles, and drones with the capability to interpret sensory data in a human-like manner. To that end, I study the processing and analysis of multimodal signals including images, videos, point clouds, and motion signals, and I design learning systems where geometric structure is a first-class component rather than an afterthought.
+
+Currently, as a postdoctoral researcher in the [Visual Intelligence Group](https://vig.kist.re.kr/){:target="_blank" rel="noopener"}, [Center for AI Research](https://cai.kist.re.kr/){:target="_blank" rel="noopener"}, [AI & Robotics Institute](https://airi.kist.re.kr/){:target="_blank" rel="noopener"} at the [Korea Institute of Science and Technology (KIST)](https://kist.re.kr//eng/index.do){:target="_blank" rel="noopener"}, I am expanding my work from geometry-aware point-cloud perception to RGB-driven 3D understanding of metric attributes such as 3D position and human height, emphasizing deployable perception for real-world platforms.
 
 ---
 

@@ -22,7 +22,7 @@ author:
   name: "Inyoung Oh"
   avatar: "/assets/images/profile.JPG"
   bio: "Geometric Deep Learning · 3D Perception and Representation Learning · Mixed Reality and Spatial Computing"
-  location: "GIST, Republic of Korea"
+  location: "Postdoctoral Fellow, Korea Institute of Science and Technology (KIST), Republic of Korea"
   links:
     - label: "Email"
       url: "mailto:deanoh90@gist.ac.kr"
@@ -30,6 +30,9 @@ author:
     - label: "Google Scholar"
       url: "https://scholar.google.co.kr/citations?hl=en&user=e3h5YtAAAAAJ&view_op=list_works&sortby=pubdate"
       icon: "fas fa-graduation-cap"   # <- 안 보이면 'fas fa-graduation-cap'로  ai ai-google-scholar
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/iyohcde/"
+      icon: "fab fa-linkedin"
     - label: "GitHub"
       url: "https://github.com/inyoungoh-cde"
       icon: "fab fa-github"

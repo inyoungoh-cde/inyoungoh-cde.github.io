@@ -23,14 +23,14 @@ I am extending this toward image-grounded, semantic foundation models: supplying
   <div class="edu-card">
     <div class="edu-title">
       <i class="fas fa-graduation-cap"></i>
-      <strong>Ph.D. Candidate</strong> <span class="edu-time">(2018–Present)</span>
+      <strong>Ph.D.</strong> <span class="edu-time">(2018–2026)</span>
     </div>
     <div class="edu-school"><strong>Gwangju Institute of Science and Technology (GIST), Gwangju, Republic of Korea</strong></div>
     <ul class="edu-list">
       <li>Major: Mechanical and Robotics Engineering</li>
       <li>Advisor: Prof. Kwang Hee Ko</li>
       <li>GPA: 4.2 / 4.5</li>
-      <li><em>Expected Graduation: February 2026</em></li>
+      <li>Graduated: February 2026</li>
       <li>Thesis: “Normal Vector Estimation, and Semantic Segmentation of 3D Point Clouds using Deep Learning and Geometric Analysis”</li>
     </ul>
   </div>

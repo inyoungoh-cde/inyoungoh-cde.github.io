@@ -3,6 +3,7 @@ layout: single
 title: About
 permalink: /about/
 author_profile: true
+classes: wide
 ---
 
 Hi, I'm Inyoung Oh, a Postdoctoral Researcher in the [Visual Intelligence Group](https://vig.kist.re.kr/){:target="_blank" rel="noopener"}, [Center for Artificial Intelligence](https://cai.kist.re.kr/){:target="_blank" rel="noopener"}, AI & Robotics Institute at the [Korea Institute of Science and Technology (KIST)](https://kist.re.kr/eng/index.do){:target="_blank" rel="noopener"}. I received my Ph.D. in [Mechanical and Robotics Engineering](https://me.gist.ac.kr/meeng/index.do){:target="_blank" rel="noopener"} from the [Gwangju Institute of Science and Technology (GIST)](https://www.gist.ac.kr/en/main.html){:target="_blank" rel="noopener"}, advised by Prof. Kwang Hee Ko in the [MODSIM](https://me.gist.ac.kr/modsim/){:target="_blank" rel="noopener"} Lab.
@@ -27,7 +28,7 @@ I am extending this toward image-grounded, semantic foundation models: supplying
     <div class="edu-school"><strong>Gwangju Institute of Science and Technology (GIST), Gwangju, Republic of Korea</strong></div>
     <ul class="edu-list">
       <li>Major: Mechanical and Robotics Engineering</li>
-      <li>Advisor: Prof. Kwanghee Ko</li>
+      <li>Advisor: Prof. Kwang Hee Ko</li>
       <li>GPA: 4.2 / 4.5</li>
       <li><em>Expected Graduation: February 2026</em></li>
       <li>Thesis: “Normal Vector Estimation, and Semantic Segmentation of 3D Point Clouds using Deep Learning and Geometric Analysis”</li>
@@ -42,7 +43,7 @@ I am extending this toward image-grounded, semantic foundation models: supplying
     <div class="edu-school"><strong>Gwangju Institute of Science and Technology (GIST), Gwangju, Republic of Korea</strong></div>
     <ul class="edu-list">
       <li>Major: Mechatronics</li>
-      <li>Advisor: Prof. Kwanghee Ko</li>
+      <li>Advisor: Prof. Kwang Hee Ko</li>
       <li>GPA: 3.91 / 4.5</li>
       <li>Thesis: “Sphere and Cylinder Detection in Kinect Point Clouds using the RANSAC and the 2D Hough Transform”</li>
     </ul>

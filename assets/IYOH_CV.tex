@@ -1,0 +1,208 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[top=0.5in,bottom=0.5in,left=0.62in,right=0.62in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
+\usepackage{titlesec}
+\usepackage{array}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.0}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=1pt, parsep=0pt, partopsep=0pt}
+
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcommand{\cvheader}[2]{%
+	\begin{tabular*}{\textwidth}{@{}p{0.74\textwidth}@{\extracolsep{\fill}}R{0.26\textwidth}@{}}
+		#1 & #2 \\
+	\end{tabular*}%
+}
+
+\begin{document}
+	\pagestyle{empty}\thispagestyle{empty}
+	
+	\begin{center}
+		{\LARGE \textbf{Inyoung Oh}}\\[1.4mm]
+		\href{mailto:deanoh90@kist.re.kr}{deanoh90@kist.re.kr}
+		\quad $\cdot$ \quad
+		\href{https://scholar.google.co.kr/citations?hl=en&user=e3h5YtAAAAAJ&view_op=list_works&sortby=pubdate}{Google Scholar}
+		\quad $\cdot$ \quad
+		\href{https://inyoungoh-cde.github.io/}{Website}
+		\quad $\cdot$ \quad
+		\href{https://github.com/inyoungoh-cde}{GitHub}\\
+		Korea Institute of Science and Technology (KIST), Seoul, Republic of Korea\\[1.0mm]
+		\textit{Fusing semantic and geometric cues for reliable, metric 3D spatial perception.}
+	\end{center}
+	
+	\section*{Research Focus}
+	\noindent
+	My research makes learned and semantic 3D \emph{metric, consistent, and structured} by fusing it with explicit geometry---recovering reliable spatial structure exactly where data-driven models are least faithful: at object boundaries, sharp discontinuities, and absolute scale.
+	\begin{itemize}[leftmargin=1.8em]
+		\item Scene-intrinsic geometric cues---surface normals, sharp boundaries, ground planes---as transferable structure injected into learned and semantic 3D
+		\item Metric, consistent 3D from a single image: bridging 2D and 3D through scene geometry, where learned depth and multi-view reconstruction fall short
+		\item Geometric representations that generalize across sensors and domains (CAD, LiDAR, indoor/outdoor scans, monocular)
+	\end{itemize}
+	
+	\section*{Education}
+	\cvheader{\textbf{Ph.D., Mechanical and Robotics Engineering}, Gwangju Institute of Science and Technology (GIST)}{\textbf{Feb 2026}}\par
+	\vspace{0.2mm}
+	{\small\hspace{1.8em}Dissertation: \textit{Normal Vector Estimation, and Semantic Segmentation of 3D Point Clouds using Deep Learning and Geometric Analysis}\par}
+	\vspace{1.4mm}
+	\cvheader{\textbf{M.S., Mechatronics}, GIST}{\textbf{Feb 2018}}\par
+	\vspace{0.2mm}
+	{\small\hspace{1.8em}Thesis: \textit{Sphere and Cylinder Detection in Kinect Point Clouds using RANSAC and the 2D Hough Transform}\par}
+	\vspace{1.4mm}
+	\cvheader{\textbf{B.S., Mechatronics}, Chungnam National University}{\textbf{Feb 2016}}\par
+	
+	\section*{Research Experience}
+	\cvheader{\textbf{Postdoctoral Fellow}, Visual Intelligence Group, KIST \textbar{} Advisor: Dr.\ Junghyun Cho}{\textbf{Feb 2026--Present}}
+	\begin{itemize}[leftmargin=1.8em]
+		\item Reframed relocalization from a moving camera---recovering its metric 3D position and nearby people's metric attributes from RGB alone---as a \textbf{geometric 2D--3D bridge}: on a map faithful up to a single global scale (verified isotropic), metric placement reduces to a ray--ground intersection set by one geometric quantity, the \textbf{ground-plane normal}, independent of pose and reconstruction method (VGGT-family, SfM, 3DGS).
+		
+		\item Bypassing monocular depth's principled limits, this estimator recovers metric position \textbf{7.7--100$\times$} better than strong monocular-depth and feed-forward baselines (even given GT pose) across indoor and outdoor capture---isolating capture geometry, not any model or dataset, as the cause (manuscript in preparation).
+		
+		\item This puts my doctoral geometry at the crux: estimating scene-intrinsic structure---surface normals, sharp and planar discontinuities, robust to sparsity and noise---is exactly what my descriptors deliver, carried from point clouds into image-grounded 3D.
+	\end{itemize}
+	
+	\vspace{3.0mm}
+	\cvheader{\textbf{Research Assistant}, Modeling and Simulation Lab, GIST \textbar{} Advisor: Prof.\ Kwang Hee Ko}{\textbf{Feb 2016--Feb 2026}}
+	%\vspace{0.6mm}
+	
+	{\small \textit{Established the geometric half of this fusion---explicit scene-intrinsic cues (surface normals, sharp features), injected into learned models, that transfer across sensors, sampling density, and noise.}}
+	
+	\vspace{2.0mm}
+	{\small \textit{Sharp Feature Detection \& Geometric Descriptors}}
+	\begin{itemize}[leftmargin=1.8em]
+		\item \textbf{SFD-Net} (ECCV 2026)---an architecture-agnostic descriptor that detects sharp features as surface-normal discontinuities. Prepended to three independent backbones \emph{without modification}, it raises Average F1 by +4--7\,pp (the descriptor, not backbone-specific tuning, drives the gains) and transfers \emph{zero-shot} from 10K-point synthetic CAD to real-world scans more than an order of magnitude larger ($\sim$36$\times$); SOTA Average F1 on ABC across all four noise conditions.
+		\item Grounding the descriptor theoretically via directional statistics (Bingham distribution on $S^2$), replacing heuristic scale selection with a training-free geometric prior that stays informative precisely at discontinuities (in preparation).
+	\end{itemize}
+	
+	\vspace{0.6mm}
+	{\small \textit{Normal Vector Estimation}}
+	\begin{itemize}[leftmargin=1.8em]
+		\item A multi-scale normal estimator resolving neighborhood-scale ambiguity under non-uniform sampling via attention-based scale weighting and Chamfer-distance noise-aware supervision; SOTA on the PCPNet primitive subset (noise-free RMSE 1.821$^\circ$, 6.53M parameters).
+	\end{itemize}
+	
+	\vspace{0.6mm}
+	{\small \textit{Semantic Segmentation (Outdoor \& Indoor)}}
+	\begin{itemize}[leftmargin=1.8em]
+		\item Injected intensity-assisted normal cues into RandLA-Net via a Normal Local Feature Aggregation module, yielding +4.0\,pp mIoU on outdoor LiDAR (SemanticKITTI, 53.9$\to$57.9) with pronounced gains on safety-critical classes (Bicycle +21.4\,pp, Motorcycle +15.2\,pp, Pedestrian +4.0\,pp).
+		\item Extended refined normals and multi-scale geometric features into boundary-aware indoor segmentation on S3DIS, achieving +6.3\% mIoU over the PushBoundary baseline (Ph.D.\ thesis).
+	\end{itemize}
+	
+	\vspace{0.6mm}
+	{\small \textit{6-DoF Pose Estimation \& MR Systems}}
+	\begin{itemize}[leftmargin=1.8em]
+		\item Designed RoI-PCA color-space augmentation to decouple object appearance from background variation, improving 5cm5deg accuracy by +10.77pp on LINEMOD; integrated into a real-time, markerless multi-device MR remote collaboration system (MR glasses + projector--camera), without depth sensors.
+	\end{itemize}
+	
+	\vspace{0.6mm}
+	{\small \textit{Geometric Primitive Recognition}}
+	\begin{itemize}[leftmargin=1.8em]
+		\item Proposed a parameter-free pipeline-recognition method from unorganized point clouds (curvature-driven classification + sphere-RANSAC centerline recovery), recovering topology-consistent structure from raw scans without user-specified priors for radius, orientation, or connectivity.
+	\end{itemize}
+	
+	\section*{Publications}
+	{\small \textbf{Published / Accepted}}\vspace{0.5mm}
+	
+	\noindent
+	\textbf{Inyoung Oh}; K.H.\ Ko.
+	``SFD-Net: Sharp Feature Detection Network Based on Local Geometric Features.''
+	\textit{European Conference on Computer Vision (ECCV)}, \textbf{2026}. \textit{(accepted)}\\
+	
+	\noindent
+	\textbf{Inyoung Oh}; J.\ Song; M.\ Kim; D.\ Yun; K.H.\ Ko.
+	``Attention-Guided Multi-Scale Point Cloud Normal Estimation with Noise-Aware Training.''
+	\textit{Int.\ J.\ Image and Graphics}, \textbf{2026}. \textit{(accepted)}\\
+	
+	\noindent
+	\textbf{Inyoung Oh}; G.\ Jang; J.\ Song; M.\ Son; D.\ Kim; J.\ Yun; K.H.\ Ko.
+	``A Mixed Reality-based Remote Collaboration Framework Using Improved Pose Estimation.''
+	\textit{Computers in Industry}, 174, 104414, \textbf{2026}.\\
+	
+	\noindent
+	M.\ Kim; \textbf{Inyoung Oh}; D.\ Yun; K.H.\ Ko.
+	``Improved Semantic Segmentation Network Using Normal Vector Guidance for LiDAR Point Clouds.''
+	\textit{J.\ Computational Design and Engineering}, 10(6), 2332--2344, \textbf{2023}.\\
+	
+	\noindent
+	\textbf{Inyoung Oh}; K.H.\ Ko.
+	``Automated Recognition of 3D Pipelines from Point Clouds.''
+	\textit{The Visual Computer}, 37(6), 1385--1400, \textbf{2021}.\\
+	
+	% ////////////////////////// DO NOT REMOVE THIS PART.
+	%{\small \textbf{Under Review}}\vspace{0.5mm}
+	
+	%\noindent
+	%\textbf{Inyoung Oh}; K.H.\ Ko.
+	%``SFD-Net: Sharp Feature Detection Network Based on Local Geometric Features.''
+	%Submitted \textbf{2026}.\\
+	% ////////////////////////// DO NOT REMOVE THIS PART.
+	
+	%{\small \textbf{In Preparation}}\vspace{0.5mm}
+	
+	%\noindent
+	%\textbf{Inyoung Oh} et al.
+	%``Metric Relocalization in Up-to-Scale Maps via Ground-Plane Geometry.''\\
+	
+	%\noindent
+	%\textbf{Inyoung Oh} et al.
+	%``Scale-Coupled Bingham Descriptor: A Directional Statistics Approach to Geometric Sharpness Estimation in 3D Point Clouds.''\\
+	
+	\section*{Patent}
+	\noindent
+	K.H.\ Ko; \textbf{Inyoung Oh}.
+	``Automated System for Detecting 3D Pipeline.''
+	KR 2010-2135828 B1 (Registered), \textbf{July 2020}.
+	
+	\section*{Awards \& Scholarships}
+	\noindent
+	\begin{tabular*}{\textwidth}{@{}p{0.78\textwidth}@{\extracolsep{\fill}}R{0.20\textwidth}@{}}
+		Best Poster Award ($\times$6), Korean Society for Computational Design and Engineering (CDE) & \textbf{2020--2025} \\
+		CDE DX Encouragement Award, Korean CDE Society & \textbf{2022} \\
+		Outstanding PhD Student RA Scholarship ($\times$5), GIST & \textbf{2018--2025} \\
+		GIST Full Scholarship (Government-funded, Doctoral \& Master's) & \textbf{2016--2026} \\
+	\end{tabular*}
+	
+	\section*{Presentations}
+	\noindent
+	\begin{tabular*}{\textwidth}{@{}p{0.88\textwidth}@{\extracolsep{\fill}}R{0.10\textwidth}@{}}
+		\textbf{Inyoung Oh}; K.H.\ Ko. ``Automatic Detection of Cylindrical Objects from Unorganized Point Cloud.'' \textit{EuroVR} (poster), London, UK. & \textbf{2018} \\[1mm]
+		\textbf{Inyoung Oh}; K.H.\ Ko. ``A RANSAC-based Method for Detection of Multiple Spheres from a Point Cloud.'' \textit{Computer Graphics International} (poster), Yokohama, Japan. & \textbf{2017} \\
+	\end{tabular*}
+	
+	\section*{Teaching \& Mentorship}
+	\noindent
+	\begin{tabular*}{\textwidth}{@{}p{0.78\textwidth}@{\extracolsep{\fill}}R{0.20\textwidth}@{}}
+		\textbf{Mentorship}, Modeling and Simulation Lab, GIST---mentored M.\ Kim from undergraduate intern through graduate studies; mentee published a first-author journal paper (\textit{JCDE}, 2023). Also guided additional interns and supervised a bachelor's thesis. & \textbf{2018--2025} \\[0.5mm]
+		\textbf{Teaching Assistant}, Engineering Analysis, GIST---recitations, assessment design, Python/MATLAB/C++ instruction. & \textbf{2017, 2020} \\
+	\end{tabular*}
+	
+	\section*{Professional Service}
+	\noindent
+	\textbf{Reviewer}, \textit{Journal of Computational Design and Engineering} (JCDE)
+	
+	\section*{Technical Skills}
+	\noindent
+	\textbf{Languages \& Frameworks:} Python, PyTorch, C++, MATLAB, Open3D, PCL, Unity3D \\
+	\textbf{Sensors \& Devices:} Velodyne/Ouster LiDAR, Kinect v2, Azure Kinect, MR smart glasses%, projector--camera systems
+	
+	\section*{References}
+	\noindent
+	\begin{tabular*}{\textwidth}{@{}p{0.33\textwidth}p{0.33\textwidth}p{0.33\textwidth}@{}}
+		\textbf{Prof.\ Kwang Hee Ko} & \textbf{Prof.\ Bochang Moon} & \textbf{Prof.\ Jinho Song} \\
+		GIST & GIST & Hannam University \\
+		\href{mailto:khko@gist.ac.kr}{khko@gist.ac.kr} &
+		\href{mailto:bmoon@gist.ac.kr}{bmoon@gist.ac.kr} &
+		\href{mailto:samuel9157@hnu.kr}{samuel9157@hnu.kr} \\
+	\end{tabular*}
+	
+\end{document}

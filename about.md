@@ -6,7 +6,7 @@ author_profile: true
 classes: wide
 ---
 
-Hi, I'm Inyoung Oh, a Postdoctoral Researcher in the [Visual Intelligence Group](https://vig.kist.re.kr/){:target="_blank" rel="noopener"}, [Center for Artificial Intelligence](https://cai.kist.re.kr/){:target="_blank" rel="noopener"}, AI & Robotics Institute at the [Korea Institute of Science and Technology (KIST)](https://kist.re.kr/eng/index.do){:target="_blank" rel="noopener"}. I received my Ph.D. in [Mechanical and Robotics Engineering](https://me.gist.ac.kr/meeng/index.do){:target="_blank" rel="noopener"} from the [Gwangju Institute of Science and Technology (GIST)](https://www.gist.ac.kr/en/main.html){:target="_blank" rel="noopener"}, advised by Prof. Kwang Hee Ko in the [MODSIM](https://me.gist.ac.kr/modsim/){:target="_blank" rel="noopener"} Lab.
+Hi, I'm Inyoung Oh, a Postdoctoral Researcher in the [Visual Intelligence Group](https://vig.kist.re.kr/){:target="_blank" rel="noopener"}, [Center for AI Research](https://cai.kist.re.kr/){:target="_blank" rel="noopener"}, AI & Robotics Institute at the [Korea Institute of Science and Technology (KIST)](https://kist.re.kr/eng/index.do){:target="_blank" rel="noopener"}. I received my Ph.D. in [Mechanical and Robotics Engineering](https://me.gist.ac.kr/meeng/index.do){:target="_blank" rel="noopener"} from the [Gwangju Institute of Science and Technology (GIST)](https://www.gist.ac.kr/en/main.html){:target="_blank" rel="noopener"}, advised by Prof. Kwang Hee Ko in the [MODSIM](https://me.gist.ac.kr/modsim/){:target="_blank" rel="noopener"} Lab.
 
 Reliable spatial perception needs two things at once: recognizing what is where, and pinning down where exactly, in metric 3D. Learned and foundation models handle the recognition well but stay geometrically loose, blurring the boundaries and discontinuities where 3D structure lives and losing absolute scale. I build the geometric half of this picture and inject it into learned and semantic models, so the recovered 3D becomes metric and structurally consistent.
 
@@ -178,7 +178,7 @@ I am extending this toward image-grounded, semantic foundation models: supplying
       </li>
       <li>
         <strong>GIST Scholarship (Government support – Doctoral studies)</strong>
-        <span class="muted">— 2018–Present</span>
+        <span class="muted">— 2018–2026</span>
       </li>
       <li>
         <strong>GIST Scholarship (Government support – Master’s studies)</strong>

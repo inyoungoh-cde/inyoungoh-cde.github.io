@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inyoung Oh — Metric 3D from Explicit Geometry</title>
+  <meta name="description" content="Inyoung Oh is a postdoctoral fellow at KIST fusing explicit geometry — surface normals, sharp features, ground planes — with learned models for metric, reliable 3D spatial perception.">
+  <link rel="canonical" href="https://inyoungoh-cde.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Inyoung Oh — Metric 3D from Explicit Geometry">
+  <meta property="og:description" content="Postdoctoral fellow at KIST. Fusing explicit geometry with learned models for metric, reliable 3D · point clouds → image-grounded 3D.">
+  <meta property="og:url" content="https://inyoungoh-cde.github.io/">
+  <meta property="og:image" content="https://inyoungoh-cde.github.io/assets/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    // Apply saved theme before first paint to avoid a flash
+    (function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Inyoung Oh",
+    "jobTitle": "Postdoctoral Fellow",
+    "worksFor": { "@type": "Organization", "name": "Korea Institute of Science and Technology (KIST)" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Gwangju Institute of Science and Technology (GIST)" },
+    "url": "https://inyoungoh-cde.github.io/",
+    "image": "https://inyoungoh-cde.github.io/assets/img/profile.jpg",
+    "sameAs": [
+      "https://scholar.google.co.kr/citations?hl=en&user=e3h5YtAAAAAJ",
+      "https://github.com/inyoungoh-cde",
+      "https://www.linkedin.com/in/iyohcde/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-name" href="index.html">Inyoung Oh</a>
+    <div class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#news">News</a>
+      <a href="#experience">Experience</a>
+      <a class="nav-pubs" href="publications.html">Publications</a>
+      <a class="nav-cv" href="assets/pdf/Inyoung_Oh_CV.pdf" target="_blank" rel="noopener">CV&nbsp;&#8599;</a>
+    </div>
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Postdoctoral Fellow · Visual Intelligence Group, KIST</p>
+        <h1>Inyoung Oh</h1>
+        <p class="hero-thesis">Fusing explicit geometry with learned models for metric, reliable 3D — point clouds&nbsp;&rarr;&nbsp;image-grounded 3D.</p>
+        <div class="hero-links">
+          <a class="primary" href="assets/pdf/Inyoung_Oh_CV.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+            Curriculum Vitae</a>
+          <a data-rs-link hidden href="#" target="_blank" rel="noopener">Research Statement</a>
+          <a data-email href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            Email</a>
+          <a href="https://scholar.google.co.kr/citations?hl=en&amp;user=e3h5YtAAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://github.com/inyoungoh-cde" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/iyohcde/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <img class="hero-photo" src="assets/img/profile.webp" alt="Portrait of Inyoung Oh" width="208" height="260">
+    </div>
+
+    <div class="highlight">
+      <span class="tag">NEW · ECCV 2026</span>
+      <p><strong>SFD-Net</strong> — an architecture-agnostic sharp-feature descriptor for point clouds — accepted to ECCV 2026.
+        <a href="https://inyoungoh-cde.github.io/SFD-Net/" target="_blank" rel="noopener">Project page</a> ·
+        <a href="publications.html#sfdnet2026">Paper details</a></p>
+    </div>
+  </div>
+</header>
+
+<section id="research" class="research">
+  <div class="wrap">
+    <p class="eyebrow">Research</p>
+    <h2>The geometric half of spatial perception</h2>
+
+    <p>I'm a Postdoctoral Fellow in the <a href="https://vig.kist.re.kr/" target="_blank" rel="noopener">Visual Intelligence Group</a>, <a href="https://cai.kist.re.kr/" target="_blank" rel="noopener">Center for AI Research</a>, AI &amp; Robotics Institute at the <a href="https://kist.re.kr/eng/index.do" target="_blank" rel="noopener">Korea Institute of Science and Technology (KIST)</a>. I received my Ph.D. in <a href="https://me.gist.ac.kr/meeng/index.do" target="_blank" rel="noopener">Mechanical and Robotics Engineering</a> from <a href="https://www.gist.ac.kr/en/main.html" target="_blank" rel="noopener">GIST</a>, advised by Prof.&nbsp;Kwang&nbsp;Hee&nbsp;Ko in the <a href="https://me.gist.ac.kr/modsim/" target="_blank" rel="noopener">MODSIM</a> Lab.</p>
+
+    <p>Reliable spatial perception needs two things at once: recognizing <em>what is where</em>, and pinning down <em>where exactly, in metric 3D</em>. Learned and foundation models handle the recognition well but stay geometrically loose, blurring the boundaries and discontinuities where 3D structure lives and losing absolute scale. I build the geometric half of this picture and inject it into learned and semantic models, so the recovered 3D becomes metric and structurally consistent.</p>
+
+    <div class="diagram-card">
+      <svg viewBox="0 0 940 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research arc: explicit geometry established on point clouds, carried into images, and fused into foundation models" font-family="'IBM Plex Mono', monospace">
+        <!-- stage boxes -->
+        <g>
+          <rect x="10" y="26" width="272" height="122" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-opacity="0.35"/>
+          <rect x="334" y="26" width="272" height="122" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-opacity="0.35"/>
+          <rect x="658" y="26" width="272" height="122" rx="12" fill="none" stroke="var(--accent)" stroke-opacity="0.6" stroke-dasharray="5 4"/>
+        </g>
+        <!-- stage 1: point cloud with normals -->
+        <g stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round">
+          <path d="M38 96 Q 78 66 118 88 T 198 84" fill="none" stroke-opacity="0.35"/>
+          <g fill="var(--accent)" stroke="none">
+            <circle cx="46" cy="92" r="2.6"/><circle cx="72" cy="77" r="2.6"/><circle cx="98" cy="76" r="2.6"/>
+            <circle cx="124" cy="89" r="2.6"/><circle cx="152" cy="90" r="2.6"/><circle cx="178" cy="84" r="2.6"/>
+          </g>
+          <path d="M72 77 L66 59"/><path d="M124 89 L124 69"/><path d="M178 84 L186 66"/>
+          <g fill="var(--accent)" stroke="none">
+            <path d="M66 59 l-3.4 6.4 6.4 1.2z"/><path d="M124 69 l-3 6.4h6z"/><path d="M186 66 l-6 3.4 4.4 4.4z"/>
+          </g>
+        </g>
+        <text x="146" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)" font-family="'Sora', sans-serif">POINT CLOUDS</text>
+        <text x="146" y="142" text-anchor="middle" font-size="10" fill="var(--muted)">explicit geometry, established</text>
+
+        <!-- stage 2: camera frustum -->
+        <g stroke="var(--accent)" stroke-width="1.6" fill="none" stroke-linejoin="round">
+          <rect x="428" y="72" width="26" height="20" rx="3"/>
+          <path d="M454 76 L488 62 L488 102 L454 88 Z" stroke-opacity="0.8"/>
+          <path d="M488 62 L512 56 M488 102 L512 108 M488 82 L512 82" stroke-opacity="0.35"/>
+        </g>
+        <text x="470" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)" font-family="'Sora', sans-serif">IMAGES</text>
+        <text x="470" y="142" text-anchor="middle" font-size="10" fill="var(--muted)">geometry carried into RGB</text>
+
+        <!-- stage 3: foundation model lattice -->
+        <g fill="var(--accent)">
+          <circle cx="758" cy="72" r="3" fill-opacity="0.9"/><circle cx="794" cy="60" r="3" fill-opacity="0.55"/>
+          <circle cx="830" cy="74" r="3" fill-opacity="0.9"/><circle cx="776" cy="94" r="3" fill-opacity="0.55"/>
+          <circle cx="812" cy="96" r="3" fill-opacity="0.9"/>
+        </g>
+        <g stroke="var(--accent)" stroke-width="1.1" stroke-opacity="0.35">
+          <path d="M758 72 L794 60 L830 74 M758 72 L776 94 L812 96 L830 74 M794 60 L812 96 M794 60 L776 94"/>
+        </g>
+        <text x="794" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)" font-family="'Sora', sans-serif">FOUNDATION MODELS</text>
+        <text x="794" y="142" text-anchor="middle" font-size="10" fill="var(--muted)">the geometric half, fused in</text>
+
+        <!-- arrows -->
+        <g stroke="var(--muted)" stroke-width="1.6" fill="none">
+          <path d="M288 87 H 326"/><path d="M612 87 H 650"/>
+        </g>
+        <g fill="var(--muted)">
+          <path d="M328 87 l-8 -4.5 v9 z"/><path d="M652 87 l-8 -4.5 v9 z"/>
+        </g>
+        <text x="308" y="76" text-anchor="middle" font-size="9.5" fill="var(--muted)">carry</text>
+        <text x="632" y="76" text-anchor="middle" font-size="9.5" fill="var(--muted)">fuse</text>
+
+        <!-- shared cue rail -->
+        <path d="M146 168 V 186 M470 168 V 186 M794 168 V 186" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="3 3" fill="none"/>
+        <path d="M60 186 H 880" stroke="var(--accent)" stroke-width="1.4" fill="none"/>
+        <g fill="var(--accent)"><circle cx="146" cy="186" r="3"/><circle cx="470" cy="186" r="3"/><circle cx="794" cy="186" r="3"/></g>
+        <text x="470" y="212" text-anchor="middle" font-size="10.5" fill="var(--ink)">SHARED SCENE-INTRINSIC CUES</text>
+        <text x="470" y="230" text-anchor="middle" font-size="10" fill="var(--muted)">surface normals &#183; sharp discontinuities &#183; ground planes</text>
+      </svg>
+      <p class="diagram-caption">one arc: the cue is shared even when the sensor is not</p>
+    </div>
+
+    <p>The constant across my work is not a tool but a principle: identify the geometric relation a representation gets wrong, then supply the explicit cue the problem demands. For one problem that cue is a surface-normal field, for another a sharp-feature descriptor, for another a ground plane. Each project surfaced its own geometric bottleneck, and I built the module that resolved it.</p>
+
+    <p>On point clouds I established this geometric half: <a href="publications.html#tvcj2021">prior-free structure recovery</a>, <a href="publications.html#jcde2023">normal-guided LiDAR segmentation</a>, <a href="publications.html#ijig2026">noise-robust normal estimation</a>, and <a href="publications.html#sfdnet2026">SFD-Net</a>, an architecture-agnostic sharp-feature descriptor that transfers across backbones and from synthetic CAD to real scans. I then carried the same scene-intrinsic geometry into images, first <a href="publications.html#cii2026">hardening real-time RGB pose</a>, and now, at KIST, <a href="publications.html#reloc-prep">recovering metric 3D from a single moving camera</a> where learned depth and feed-forward reconstruction each fall short.</p>
+
+    <p>I am extending this toward image-grounded, semantic foundation models: supplying the geometric half they lack so their rich but up-to-scale output becomes metric, consistent, and structured. My aim is spatial perception in which explicit geometry is a first-class inductive bias, fused with learned recognition rather than left for it to infer.</p>
+
+    <details class="bio-details">
+      <summary>One-paragraph bio for talks &amp; committees</summary>
+      <div class="bio-body">
+        <p>Inyoung Oh is a postdoctoral fellow in the Visual Intelligence Group at the Korea Institute of Science and Technology (KIST). Oh received a Ph.D. in Mechanical and Robotics Engineering from the Gwangju Institute of Science and Technology (GIST) in 2026, advised by Prof.&nbsp;Kwang Hee Ko. Oh's research fuses explicit geometry — surface normals, sharp features, and ground planes — with learned and semantic models so that recovered 3D becomes metric, consistent, and structured, spanning point-cloud analysis (including SFD-Net, ECCV 2026) and metric 3D from monocular video.</p>
+        <button type="button" class="copy-btn" data-copy-bio>Copy bio</button>
+      </div>
+    </details>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="selected">
+  <div class="wrap">
+    <p class="eyebrow">Selected Publications</p>
+    <h2>Four papers that carry the arc</h2>
+    <div class="pub-list" id="selected-pubs"><!-- rendered from data.js --></div>
+    <p class="see-all"><a href="publications.html">See all publications, by theme or by venue &rarr;</a></p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="news">
+  <div class="wrap">
+    <p class="eyebrow">News</p>
+    <h2>Recent updates</h2>
+    <ul class="news-list" id="news-list"><!-- rendered from data.js --></ul>
+    <p class="news-more"><button type="button" class="btn" id="news-toggle" aria-expanded="false">Show all items</button></p>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2>Research experience</h2>
+
+    <div class="xp-card">
+      <div class="xp-head">
+        <span class="xp-role">Postdoctoral Fellow</span>
+        <span class="xp-org">Visual Intelligence Group, KIST · Advisor: Dr.&nbsp;Junghyun Cho</span>
+        <span class="xp-date">Feb 2026 — present</span>
+      </div>
+      <ul>
+        <li>Reframed relocalization from a moving camera — placing it and nearby people in metric 3D from RGB alone — as a <strong>geometric 2D–3D bridge</strong>: on an up-to-scale map, metric placement reduces to a ray–ground intersection governed by one scene-intrinsic quantity, the ground-plane normal.</li>
+        <li>The resulting estimator is representation-agnostic and substantially outperforms strong monocular-depth and feed-forward reconstruction baselines across indoor and outdoor capture (manuscript in preparation).</li>
+        <li>This places my doctoral geometry at the crux: the surface normals and sharp/planar discontinuities my descriptors deliver, carried from point clouds into image-grounded 3D.</li>
+      </ul>
+    </div>
+
+    <div class="xp-card">
+      <div class="xp-head">
+        <span class="xp-role">Research Assistant</span>
+        <span class="xp-org">Modeling and Simulation Lab, GIST · Advisor: Prof.&nbsp;Kwang Hee Ko</span>
+        <span class="xp-date">Feb 2016 — Feb 2026</span>
+      </div>
+      <p class="xp-note">Established the geometric half of this fusion: explicit scene-intrinsic cues, injected into learned models, that transfer across sensors, sampling density, and noise.</p>
+
+      <p class="xp-sub">Sharp features &amp; geometric descriptors</p>
+      <ul>
+        <li><strong>SFD-Net</strong> (ECCV 2026): an architecture-agnostic sharp-feature descriptor; prepended unmodified to three independent backbones it raises Average F1 by +4–7&nbsp;pp and transfers zero-shot from synthetic CAD to real scans ~36&times; larger.</li>
+        <li>Grounding the descriptor via directional statistics (Bingham distribution on <em>S</em><sup>2</sup>), replacing heuristic scale selection with a training-free geometric prior (in preparation).</li>
+      </ul>
+
+      <p class="xp-sub">Normal estimation &amp; segmentation</p>
+      <ul>
+        <li>A multi-scale, noise-aware normal estimator with attention-based scale weighting; lowest noise-free RMSE on the PCPNet primitive subset (IJIG 2026).</li>
+        <li>Intensity-assisted normal cues injected into RandLA-Net (+4.0&nbsp;pp mIoU on SemanticKITTI, with the largest gains on safety-critical classes), extended to boundary-aware indoor segmentation on S3DIS (+6.3% mIoU over PushBoundary; Ph.D. thesis).</li>
+      </ul>
+
+      <p class="xp-sub">Pose, MR systems &amp; primitive recognition</p>
+      <ul>
+        <li>RoI-PCA color augmentation for markerless 6-DoF RGB pose (+10.77&nbsp;pp on LINEMOD 5cm5&deg;), deployed in a real-time multi-device MR remote-collaboration system (Computers in Industry, 2026).</li>
+        <li>Prior-free pipeline recognition from unorganized point clouds: curvature-driven classification and sphere-RANSAC centerline recovery without user-specified priors (The Visual Computer, 2021; registered patent with technology transfer).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="education">
+  <div class="wrap">
+    <p class="eyebrow">Education</p>
+    <h2>Degrees</h2>
+    <div class="edu-grid">
+      <div class="xp-card">
+        <div class="xp-head"><span class="xp-role">Ph.D., Mechanical &amp; Robotics Engineering</span><span class="xp-date">2018 — Feb 2026</span></div>
+        <p class="xp-note">GIST · Advisor: Prof.&nbsp;Kwang Hee Ko · GPA 4.2/4.5</p>
+        <p class="edu-thesis">Dissertation: <em>Normal Vector Estimation, and Semantic Segmentation of 3D Point Clouds using Deep Learning and Geometric Analysis</em></p>
+      </div>
+      <div class="xp-card">
+        <div class="xp-head"><span class="xp-role">M.S., Mechatronics</span><span class="xp-date">2016 — 2018</span></div>
+        <p class="xp-note">GIST · Advisor: Prof.&nbsp;Kwang Hee Ko · GPA 3.91/4.5</p>
+        <p class="edu-thesis">Thesis: <em>Sphere and Cylinder Detection in Kinect Point Clouds using RANSAC and the 2D Hough Transform</em></p>
+      </div>
+      <div class="xp-card">
+        <div class="xp-head"><span class="xp-role">B.S., Mechatronics Engineering</span><span class="xp-date">2009 — 2016</span></div>
+        <p class="xp-note">Chungnam National University · GPA 3.91/4.5</p>
+        <p class="edu-thesis">Thesis: <em>Research on Semi-Automatic Drills</em> — Grand Prize, Capstone Design Fair</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="awards">
+  <div class="wrap">
+    <p class="eyebrow">Recognition</p>
+    <h2>Awards &amp; scholarships</h2>
+    <table class="award-table">
+      <tbody>
+        <tr><td><strong>Best Poster Award &times;6</strong>, Korean Society for Computational Design and Engineering (CDE)</td><td class="yr">2020 — 2025</td></tr>
+        <tr><td><strong>CDE DX Encouragement Award</strong>, Korean CDE Society</td><td class="yr">2022</td></tr>
+        <tr><td><strong>Outstanding Ph.D. Student RA Scholarship &times;5</strong>, GIST</td><td class="yr">2018 — 2025</td></tr>
+        <tr><td><strong>GIST Full Scholarship</strong> (government-funded, M.S. &amp; Ph.D.)</td><td class="yr">2016 — 2026</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="more">
+  <div class="wrap">
+    <p class="eyebrow">More</p>
+    <h2>Teaching, service &amp; skills</h2>
+    <div class="misc-grid">
+      <div class="xp-card">
+        <h3>Teaching &amp; mentorship</h3>
+        <ul>
+          <li><strong>Mentorship</strong>, MODSIM Lab, GIST (2018–2025): mentored a student from undergraduate intern through graduate studies; mentee published a first-author journal paper (JCDE, 2023). Guided additional interns and supervised a bachelor's thesis.</li>
+          <li><strong>Teaching Assistant</strong>, Engineering Analysis, GIST (2017, 2020): recitations, assessment design, and Python/MATLAB/C++ instruction.</li>
+        </ul>
+      </div>
+      <div class="xp-card">
+        <h3>Service &amp; technical skills</h3>
+        <ul>
+          <li><strong>Reviewer</strong> — Journal of Computational Design and Engineering (JCDE).</li>
+          <li><strong>Languages &amp; frameworks</strong> — Python, PyTorch, C++, MATLAB, Open3D, PCL, Unity3D.</li>
+          <li><strong>Sensors &amp; devices</strong> — Velodyne/Ouster LiDAR, Kinect v2, Azure Kinect, MR smart glasses.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a data-email data-email-text href="#">email</a>
+      <a href="https://scholar.google.co.kr/citations?hl=en&amp;user=e3h5YtAAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://github.com/inyoungoh-cde" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/iyohcde/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="assets/pdf/Inyoung_Oh_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+    <p class="foot-meta">&copy; Inyoung Oh · Last updated <span data-updated></span> · Visual Intelligence Group, KIST, Seoul</p>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

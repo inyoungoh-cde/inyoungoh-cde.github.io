@@ -263,7 +263,7 @@ const PUBS = [
     theme: "gdl",
     date: "2026-06-01",
     year: 2026,
-    title: "Scale-Coupled Bingham Descriptor: A Directional Statistics Approach to Geometric Sharpness Estimation in 3D Point Clouds",
+    title: "A Directional Statistics Approach to Geometric Sharpness Estimation in 3D Point Clouds",
     authors: "Inyoung Oh, et al.",
     venue: "Manuscript in preparation",
     badges: [{ kind: "status", text: "in preparation" }],

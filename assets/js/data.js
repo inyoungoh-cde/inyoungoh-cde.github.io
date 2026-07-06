@@ -8,7 +8,7 @@
    ============================================================ */
 
 const SITE = {
-  updated: "2026-07-05",            // shown in the footer — bump when you edit
+  updated: "2026-07-06",            // shown in the footer — bump when you edit
   cv: "assets/pdf/Inyoung_Oh_CV.pdf",
   researchStatement: null,          // set to "assets/pdf/Inyoung_Oh_Research_Summary.pdf" when ready to publish
   scholar: "https://scholar.google.co.kr/citations?hl=en&user=e3h5YtAAAAAJ&view_op=list_works&sortby=pubdate",

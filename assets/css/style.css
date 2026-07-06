@@ -268,6 +268,21 @@ section > .wrap > h2 {
   overflow-x: auto;
 }
 .diagram-card svg { display: block; min-width: 660px; width: 100%; height: auto; }
+
+/* AI-artwork figure: stays a white plate in both themes, like a journal figure */
+.diagram-figure { background: #ffffff; }
+.diagram-figure img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.diagram-stage { position: relative; }
+.diagram-labels { position: relative; height: 2.7em; margin-top: 4px; }
+.diagram-labels > div { position: absolute; top: 0; transform: translateX(-50%); text-align: center; white-space: nowrap; }
+.diagram-labels strong { display: block; font-family: var(--font-display); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.03em; color: #17222c; }
+.diagram-labels span { font-family: var(--font-mono); font-size: 0.66rem; color: #5c6b77; }
+.diagram-figure .diagram-caption { color: #5c6b77; }
+@media (max-width: 620px) {
+  .diagram-labels { height: 1.5em; }
+  .diagram-labels strong { font-size: 0.6rem; }
+  .diagram-labels span { display: none; }
+}
 .diagram-caption {
   font-family: var(--font-mono);
   font-size: 0.72rem;

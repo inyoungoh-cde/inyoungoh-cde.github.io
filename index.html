@@ -109,69 +109,17 @@
 
     <p>Reliable spatial perception needs two things at once: recognizing <em>what is where</em>, and pinning down <em>where exactly, in metric 3D</em>. Learned and foundation models handle the recognition well but stay geometrically loose, blurring the boundaries and discontinuities where 3D structure lives and losing absolute scale. I build the geometric half of this picture and inject it into learned and semantic models, so the recovered 3D becomes metric and structurally consistent.</p>
 
-    <div class="diagram-card">
-      <svg viewBox="0 0 940 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research arc: explicit geometry established on point clouds, carried into images, and fused into foundation models" font-family="'IBM Plex Mono', monospace">
-        <!-- stage boxes -->
-        <g>
-          <rect x="10" y="26" width="272" height="122" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-opacity="0.35"/>
-          <rect x="334" y="26" width="272" height="122" rx="12" fill="var(--accent-soft)" stroke="var(--accent)" stroke-opacity="0.35"/>
-          <rect x="658" y="26" width="272" height="122" rx="12" fill="none" stroke="var(--accent)" stroke-opacity="0.6" stroke-dasharray="5 4"/>
-        </g>
-        <!-- stage 1: point cloud with normals -->
-        <g stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round">
-          <path d="M38 96 Q 78 66 118 88 T 198 84" fill="none" stroke-opacity="0.35"/>
-          <g fill="var(--accent)" stroke="none">
-            <circle cx="46" cy="92" r="2.6"/><circle cx="72" cy="77" r="2.6"/><circle cx="98" cy="76" r="2.6"/>
-            <circle cx="124" cy="89" r="2.6"/><circle cx="152" cy="90" r="2.6"/><circle cx="178" cy="84" r="2.6"/>
-          </g>
-          <path d="M72 77 L66 59"/><path d="M124 89 L124 69"/><path d="M178 84 L186 66"/>
-          <g fill="var(--accent)" stroke="none">
-            <path d="M66 59 l-3.4 6.4 6.4 1.2z"/><path d="M124 69 l-3 6.4h6z"/><path d="M186 66 l-6 3.4 4.4 4.4z"/>
-          </g>
-        </g>
-        <text x="146" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)" font-family="'Sora', sans-serif">POINT CLOUDS</text>
-        <text x="146" y="142" text-anchor="middle" font-size="10" fill="var(--muted)">explicit geometry, established</text>
-
-        <!-- stage 2: camera frustum -->
-        <g stroke="var(--accent)" stroke-width="1.6" fill="none" stroke-linejoin="round">
-          <rect x="428" y="72" width="26" height="20" rx="3"/>
-          <path d="M454 76 L488 62 L488 102 L454 88 Z" stroke-opacity="0.8"/>
-          <path d="M488 62 L512 56 M488 102 L512 108 M488 82 L512 82" stroke-opacity="0.35"/>
-        </g>
-        <text x="470" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)" font-family="'Sora', sans-serif">IMAGES</text>
-        <text x="470" y="142" text-anchor="middle" font-size="10" fill="var(--muted)">geometry carried into RGB</text>
-
-        <!-- stage 3: foundation model lattice -->
-        <g fill="var(--accent)">
-          <circle cx="758" cy="72" r="3" fill-opacity="0.9"/><circle cx="794" cy="60" r="3" fill-opacity="0.55"/>
-          <circle cx="830" cy="74" r="3" fill-opacity="0.9"/><circle cx="776" cy="94" r="3" fill-opacity="0.55"/>
-          <circle cx="812" cy="96" r="3" fill-opacity="0.9"/>
-        </g>
-        <g stroke="var(--accent)" stroke-width="1.1" stroke-opacity="0.35">
-          <path d="M758 72 L794 60 L830 74 M758 72 L776 94 L812 96 L830 74 M794 60 L812 96 M794 60 L776 94"/>
-        </g>
-        <text x="794" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)" font-family="'Sora', sans-serif">FOUNDATION MODELS</text>
-        <text x="794" y="142" text-anchor="middle" font-size="10" fill="var(--muted)">the geometric half, fused in</text>
-
-        <!-- arrows -->
-        <g stroke="var(--muted)" stroke-width="1.6" fill="none">
-          <path d="M288 87 H 326"/><path d="M612 87 H 650"/>
-        </g>
-        <g fill="var(--muted)">
-          <path d="M328 87 l-8 -4.5 v9 z"/><path d="M652 87 l-8 -4.5 v9 z"/>
-        </g>
-        <text x="308" y="76" text-anchor="middle" font-size="9.5" fill="var(--muted)">carry</text>
-        <text x="632" y="76" text-anchor="middle" font-size="9.5" fill="var(--muted)">fuse</text>
-
-        <!-- shared cue rail -->
-        <path d="M146 168 V 186 M470 168 V 186 M794 168 V 186" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="3 3" fill="none"/>
-        <path d="M60 186 H 880" stroke="var(--accent)" stroke-width="1.4" fill="none"/>
-        <g fill="var(--accent)"><circle cx="146" cy="186" r="3"/><circle cx="470" cy="186" r="3"/><circle cx="794" cy="186" r="3"/></g>
-        <text x="470" y="212" text-anchor="middle" font-size="10.5" fill="var(--ink)">SHARED SCENE-INTRINSIC CUES</text>
-        <text x="470" y="230" text-anchor="middle" font-size="10" fill="var(--muted)">surface normals &#183; sharp discontinuities &#183; ground planes</text>
-      </svg>
-      <p class="diagram-caption">one arc: the cue is shared even when the sensor is not</p>
-    </div>
+    <figure class="diagram-card diagram-figure">
+      <div class="diagram-stage">
+        <img src="assets/img/research-arc.webp" alt="Research arc: a point cloud with surface normal vectors is carried through a camera, ground plane and image plane, then fused into a neural network lattice" width="1680" height="544" loading="lazy">
+        <div class="diagram-labels">
+          <div style="left:13.3%"><strong>POINT CLOUDS</strong><span>explicit geometry, established</span></div>
+          <div style="left:50.3%"><strong>IMAGES</strong><span>geometry carried into RGB</span></div>
+          <div style="left:84.5%"><strong>FOUNDATION MODELS</strong><span>the geometric half, fused in</span></div>
+        </div>
+      </div>
+      <figcaption class="diagram-caption">one arc, shared cues: surface normals &#183; sharp discontinuities &#183; ground planes</figcaption>
+    </figure>
 
     <p>The constant across my work is not a tool but a principle: identify the geometric relation a representation gets wrong, then supply the explicit cue the problem demands. For one problem that cue is a surface-normal field, for another a sharp-feature descriptor, for another a ground plane. Each project surfaced its own geometric bottleneck, and I built the module that resolved it.</p>
 

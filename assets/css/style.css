@@ -267,7 +267,12 @@ section > .wrap > h2 {
   padding: 20px 16px 12px;
   overflow-x: auto;
 }
-.diagram-card svg { display: block; min-width: 660px; width: 100%; height: auto; }
+.diagram-card svg { display: block; width: 100%; height: auto; }
+.svg-mobile { display: none; max-width: 460px; margin: 0 auto; }
+@media (max-width: 640px) {
+  .svg-desktop { display: none; }
+  .svg-mobile { display: block; }
+}
 
 /* AI-artwork figure: stays a white plate in both themes, like a journal figure */
 .diagram-figure { background: #ffffff; }
@@ -560,7 +565,7 @@ footer { margin-top: 56px; border-top: 1px solid var(--line-soft); padding: 30px
   .nav-inner { gap: 8px; }
   .nav-links a { padding: 6px 7px; }
   .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-  .hero-photo { width: 148px; order: -1; }
+  .hero-photo { width: 148px; }
   .pub-card { grid-template-columns: 1fr; }
   .pub-thumb { width: 100%; max-width: 340px; }
   .edu-grid, .misc-grid { grid-template-columns: 1fr; }

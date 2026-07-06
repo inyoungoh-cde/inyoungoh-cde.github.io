@@ -117,7 +117,7 @@
 
     <p>The constant across my work is not a tool but a principle: identify the geometric relation a representation gets wrong, then supply the explicit cue the problem demands. For one problem that cue is a surface-normal field, for another a sharp-feature descriptor, for another a ground plane. Each project surfaced its own geometric bottleneck, and I built the module that resolved it.</p>
 
-    <p>On point clouds I established this geometric half: <a href="publications.html#tvcj2021">prior-free structure recovery</a>, <a href="publications.html#jcde2023">normal-guided LiDAR segmentation</a>, <a href="publications.html#ijig2026">noise-robust normal estimation</a>, and <a href="publications.html#sfdnet2026">SFD-Net</a>, an architecture-agnostic sharp-feature descriptor that transfers across backbones and from synthetic CAD to real scans. I then carried the same scene-intrinsic geometry into images, first <a href="publications.html#cii2026">hardening real-time RGB pose</a>, and now, at KIST, <a href="publications.html#reloc-prep">recovering metric 3D from a single moving camera</a> where learned depth and feed-forward reconstruction each fall short.</p>
+    <p>On point clouds I established this geometric half: <a href="publications.html#tvcj2021">prior-free structure recovery</a>, <a href="publications.html#jcde2023">normal-guided LiDAR segmentation</a>, <a href="publications.html#ijig2026">noise-robust normal estimation</a>, and <a href="publications.html#sfdnet2026">SFD-Net</a>, an architecture-agnostic sharp-feature descriptor that transfers across backbones and from synthetic CAD to real scans. I then carried the same scene-intrinsic geometry into images, first <a href="publications.html#cii2026">making real-time 6-DoF object pose from a single RGB image robust enough to deploy</a>, and now, at KIST, <a href="publications.html#reloc-prep">recovering metric 3D from a moving camera</a> where learned depth and multi-view reconstruction each fall short.</p>
 
     <p>I am extending this toward image-grounded, semantic foundation models: supplying the geometric half they lack so their rich but up-to-scale output becomes metric, consistent, and structured. My aim is spatial perception in which explicit geometry is a first-class inductive bias, fused with learned recognition rather than left for it to infer.</p>
 
@@ -184,7 +184,7 @@
       <p class="xp-sub">Sharp features &amp; geometric descriptors</p>
       <ul>
         <li><strong>SFD-Net</strong> (ECCV 2026): an architecture-agnostic sharp-feature descriptor; prepended unmodified to three independent backbones it raises Average F1 by +4–7&nbsp;pp and transfers zero-shot from synthetic CAD to real scans ~36&times; larger.</li>
-        <li>Grounding the descriptor via directional statistics (Bingham distribution on <em>S</em><sup>2</sup>), replacing heuristic scale selection with a training-free geometric prior (in preparation).</li>
+        <li>Grounding the descriptor theoretically via directional statistics, replacing heuristic scale selection with a training-free geometric prior that stays informative precisely at discontinuities (in preparation).</li>
       </ul>
 
       <p class="xp-sub">Normal estimation &amp; segmentation</p>
@@ -255,7 +255,7 @@
       <div class="xp-card">
         <h3>Teaching &amp; mentorship</h3>
         <ul>
-          <li><strong>Mentorship</strong>, MODSIM Lab, GIST (2018–2025): mentored a student from undergraduate intern through graduate studies; mentee published a first-author journal paper (JCDE, 2023). Guided additional interns and supervised a bachelor's thesis.</li>
+          <li><strong>Mentorship</strong>, MODSIM Lab, GIST (2018–2026): mentored a student from undergraduate intern through graduate studies; mentee published a first-author journal paper (JCDE, 2023). Guided additional interns and supervised a bachelor's thesis.</li>
           <li><strong>Teaching Assistant</strong>, Engineering Analysis, GIST (2017, 2020): recitations, assessment design, and Python/MATLAB/C++ instruction.</li>
         </ul>
       </div>

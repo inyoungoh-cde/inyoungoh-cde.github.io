@@ -6,7 +6,7 @@ Jekyll/Ruby/GitHub Actions 지식이 전혀 필요 없습니다.
 ## 폴더 구조
 
 ```
-index.html            홈 (연구 소개 · 다이어그램 · Selected Pubs · News · 경력 · 학력 · 수상)
+index.html            홈 (연구 소개 · 다이어그램 · SFD-Net 루프 스트립 · Selected Pubs · News · 경력 · 학력 · 수상 · Open source)
 publications.html     논문 전체 목록 (테마 필터 + 카테고리 섹션)
 404.html              잘못된 주소 접속 시 페이지
 favicon.svg           브라우저 탭 아이콘
@@ -16,6 +16,7 @@ assets/
   js/data.js          ★ 데이터 파일 — 평소 수정할 파일은 사실상 이것 하나
   js/main.js          렌더링 로직 (수정할 일 거의 없음)
   img/                최적화된 이미지 (WebP)
+  media/              SFD-Net 루프 클립 4개(mp4) + 포스터(jpg) + OG 카드(og_sfdnet.png)
   pdf/Inyoung_Oh_CV.pdf
 ```
 
@@ -53,7 +54,17 @@ PDF를 `assets/pdf/`에 넣고, `data.js`에서
 ### 5. 수정 날짜 갱신
 내용을 고쳤으면 `data.js` 맨 위 `SITE.updated`의 날짜를 바꿔주세요 (푸터에 표시됨).
 
-### 6. 썸네일 이미지 추가
+### 6. 하이라이트 루프 클립 교체/추가
+스트립의 클립들은 `assets/media/`에 있고, 카드 마크업은 `index.html`의
+`<section id="highlights">` 안에 있습니다.
+- 교체: 같은 파일명(`loop_*.mp4` + 같은 이름 `.jpg` 포스터)으로 덮어쓰면 끝
+- 추가: index.html에서 `<a class="media-card">` 블록 하나를 복사해 파일 경로·캡션·링크만 수정
+- 클립 규격: 1080×1080 정사각, 8초 심리스 루프, h264/yuv420p, faststart, 2MB 이하,
+  텍스트 굽지 않기(캡션은 HTML). 재생성 명령은 연구 서버의 `make_web_loops.py`와
+  로컬에 보관한 `manifest.md` 참고
+- 캡션에 수치를 쓸 땐 논문 Table 1의 510모델 값만 사용
+
+### 7. 썸네일 이미지 추가
 - 가로 640px, WebP 형식 권장 (수십 KB 수준 유지)
 - 무료 변환: https://squoosh.app (브라우저에서 리사이즈 + WebP 저장)
 - `assets/img/`에 넣고 `PUBS` 항목의 `thumb`에 경로 기입

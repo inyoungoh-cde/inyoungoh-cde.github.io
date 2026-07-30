@@ -30,6 +30,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Inyoung Oh",
+    "alternateName": "오인영",
     "jobTitle": "Postdoctoral Fellow",
     "worksFor": { "@type": "Organization", "name": "Korea Institute of Science and Technology (KIST)" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Gwangju Institute of Science and Technology (GIST)" },
@@ -128,6 +129,33 @@
         <button type="button" class="copy-btn" data-copy-bio>Copy bio</button>
       </div>
     </details>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section id="highlights">
+  <div class="wrap">
+    <p class="eyebrow">Research Highlights &middot; SFD-Net (ECCV 2026)</p>
+    <h2>The method, in four loops</h2>
+    <div class="media-strip">
+      <a class="media-card" href="publications.html#sfdnet2026">
+        <video src="assets/media/loop_target.mp4" poster="assets/media/loop_target.jpg" muted loop playsinline preload="none" width="1080" height="1080" aria-label="Rotating point cloud with ground-truth sharp features in red"></video>
+        <p class="media-caption">Sharp features are creases where the surface normal jumps &mdash; under 10% of points in a typical CAD scan.</p>
+      </a>
+      <a class="media-card" href="publications.html#sfdnet2026">
+        <video src="assets/media/loop_lgd.mp4" poster="assets/media/loop_lgd.jpg" muted loop playsinline preload="none" width="1080" height="1080" aria-label="LGD descriptor response highlighting creases before any learning"></video>
+        <p class="media-caption">The LGD descriptor separates them from raw geometry alone, before any network sees the cloud.</p>
+      </a>
+      <a class="media-card" href="publications.html#sfdnet2026">
+        <video src="assets/media/loop_pred.mp4" poster="assets/media/loop_pred.jpg" muted loop playsinline preload="none" width="1080" height="1080" aria-label="SFD-Net point-wise prediction with correct, false-alarm and missed points"></video>
+        <p class="media-caption">SFD-Net&rsquo;s point-wise decision: green correct, red false alarm, orange missed.</p>
+      </a>
+      <a class="media-card" href="publications.html#sfdnet2026">
+        <video src="assets/media/loop_noise.mp4" poster="assets/media/loop_noise.jpg" muted loop playsinline preload="none" width="1080" height="1080" aria-label="Prediction under increasing scan noise from zero to 1.2 percent"></video>
+        <p class="media-caption">Under noise up to 1.2% of the bounding-box diagonal, Average F1 holds 61.33&nbsp;&rarr;&nbsp;57.05 on the 510-model ABC test set.</p>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -287,7 +315,7 @@
       <a href="https://www.linkedin.com/in/iyohcde/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="assets/pdf/Inyoung_Oh_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
-    <p class="foot-meta">&copy; Inyoung Oh · Last updated <span data-updated></span> · Visual Intelligence Group, KIST, Seoul</p>
+    <p class="foot-meta">&copy; Inyoung Oh (오인영) · Last updated <span data-updated></span> · Visual Intelligence Group, KIST, Seoul</p>
   </div>
 </footer>
 

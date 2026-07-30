@@ -221,4 +221,27 @@
       if (target) target.scrollIntoView();
     }
   }
+
+  /* ---------- media highlights strip: play only when visible ---------- */
+  const strip = document.querySelector(".media-strip");
+  if (strip) {
+    const vids = strip.querySelectorAll("video");
+    const reduce = typeof matchMedia === "function" &&
+      matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce && "IntersectionObserver" in window) {
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          const v = en.target;
+          if (en.isIntersecting) {
+            const p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      vids.forEach(function (v) { io.observe(v); });
+    }
+    /* if reduced motion or no IO support: posters remain as still images */
+  }
 })();

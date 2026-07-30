@@ -476,6 +476,59 @@ section > .wrap > h2 {
   color: var(--muted);
 }
 
+/* ---------------- Media highlights strip ---------------- */
+
+.media-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+.media-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease;
+}
+.media-card:hover { border-color: var(--accent); }
+.media-card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  background: #101010;
+}
+.media-caption {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--muted);
+  margin: 9px 2px 2px;
+}
+@media (max-width: 900px) {
+  .media-strip {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-left: -22px;
+    margin-right: -22px;
+    padding: 2px 22px 8px;
+  }
+  .media-strip::-webkit-scrollbar { display: none; }
+  .media-card {
+    flex: 0 0 76%;
+    max-width: 340px;
+    scroll-snap-align: center;
+  }
+}
+
 /* ---------------- News ---------------- */
 
 .news-list { list-style: none; margin: 16px 0 0; padding: 0; }

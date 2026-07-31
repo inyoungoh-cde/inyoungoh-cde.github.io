@@ -21,7 +21,7 @@ const SITE = {
 
 /* Third-person bio for invited talks / committee use (copy button on the site). */
 const BIO =
-  "Inyoung Oh is a postdoctoral fellow in the Visual Intelligence Group at the " +
+  "Inyoung Oh is a postdoctoral fellow in the Center for Artificial Intelligence at the " +
   "Korea Institute of Science and Technology (KIST). Oh received a Ph.D. in Mechanical " +
   "and Robotics Engineering from the Gwangju Institute of Science and Technology (GIST) " +
   "in 2026, advised by Prof. Kwang Hee Ko. Oh's research fuses explicit geometry — " +
@@ -32,7 +32,7 @@ const BIO =
 const NEWS = [
   { date: "2026-06-18", html: 'Our paper <strong>SFD-Net</strong> has been accepted to <em>ECCV 2026</em>. <a href="https://inyoungoh-cde.github.io/SFD-Net/" target="_blank" rel="noopener">Project page</a> · <a href="publications.html#sfdnet2026">details</a>.' },
   { date: "2026-05-19", html: 'Our paper on <a href="publications.html#ijig2026">attention-guided multi-scale normal estimation</a> has been accepted to the <em>International Journal of Image and Graphics</em>.' },
-  { date: "2026-02-01", html: 'Started as a Postdoctoral Fellow in the <a href="https://vig.kist.re.kr/" target="_blank" rel="noopener">Visual Intelligence Group</a> at KIST, working on metric 3D from monocular video.' },
+  { date: "2026-02-01", html: 'Started as a Postdoctoral Fellow in the Center for Artificial Intelligence at KIST, working on metric 3D from monocular video.' },
   { date: "2025-11-06", html: 'Our paper on an <a href="publications.html#cii2026">MR remote-collaboration framework</a> has been accepted to <em>Computers in Industry</em>. Featured on the <a href="https://www.gist.ac.kr/kr/html/sub07/070102.html?mode=V&no=219806" target="_blank" rel="noopener">GIST website</a>, the <a href="https://blog.naver.com/bestgista/224105644900" target="_blank" rel="noopener">GIST blog</a>, and <a href="https://science.ytn.co.kr/program/view.php?mcd=0082&key=202512051106248007" target="_blank" rel="noopener">YTN Science</a>.' },
   { date: "2024-11-26", html: "Successfully defended my doctoral dissertation (degree conferred February 2026)." },
   { date: "2023-11-09", html: 'Our paper on <a href="publications.html#jcde2023">normal-guided LiDAR semantic segmentation</a> has been accepted to the <em>Journal of Computational Design and Engineering</em>.' },

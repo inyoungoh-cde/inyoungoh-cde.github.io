@@ -222,10 +222,12 @@
     }
   }
 
-  /* ---------- media highlights strip: play only when visible ---------- */
-  const strip = document.querySelector(".media-strip");
-  if (strip) {
-    const vids = strip.querySelectorAll("video");
+  /* ---------- looping videos: play only while visible ----------
+     NB: query every video on the page, not one strip. The page now has more
+     than one .media-strip (the research arc reuses the component), and an
+     earlier single-strip lookup silently skipped the clips. ---------- */
+  const loopVids = document.querySelectorAll("video[loop]");
+  if (loopVids.length) {
     const reduce = typeof matchMedia === "function" &&
       matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (!reduce && "IntersectionObserver" in window) {
@@ -234,14 +236,16 @@
           const v = en.target;
           if (en.isIntersecting) {
             const p = v.play();
-            if (p && p.catch) p.catch(function () {});
+            if (p && p.catch) p.catch(function () { v.controls = true; });
           } else {
             v.pause();
           }
         });
-      }, { threshold: 0.35 });
-      vids.forEach(function (v) { io.observe(v); });
+      }, { threshold: 0.25 });
+      loopVids.forEach(function (v) { io.observe(v); });
+    } else {
+      /* reduced motion or no IO: leave posters, but let people opt in */
+      loopVids.forEach(function (v) { v.controls = true; });
     }
-    /* if reduced motion or no IO support: posters remain as still images */
   }
 })();

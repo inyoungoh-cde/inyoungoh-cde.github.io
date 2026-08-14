@@ -6,16 +6,17 @@ Jekyll/Ruby/GitHub Actions 지식이 전혀 필요 없습니다.
 ## 폴더 구조
 
 ```
-index.html            홈 (연구 소개 · 다이어그램 · SFD-Net 루프 스트립 · Selected Pubs · News · 경력 · 학력 · 수상 · Open source)
+index.html            홈 (연구 소개 · 연구 아크 3단 카드 · SFD-Net 루프 스트립 · Selected Pubs · News · 경력 · 학력 · 수상 · Open source)
 publications.html     논문 전체 목록 (테마 필터 + 카테고리 섹션)
 404.html              잘못된 주소 접속 시 페이지
 favicon.svg           브라우저 탭 아이콘
-.nojekyll             GitHub Pages의 Jekyll 처리 비활성화 (숨김 파일)
+(.nojekyll)           Jekyll 처리 비활성화용 숨김 파일 — 현재 레포에는 없으며, 없어도 정상 작동
 assets/
   css/style.css       모든 스타일 (색·폰트·레이아웃, 다크모드 포함)
   js/data.js          ★ 데이터 파일 — 평소 수정할 파일은 사실상 이것 하나
   js/main.js          렌더링 로직 (수정할 일 거의 없음)
   img/                최적화된 이미지 (WebP)
+                      ※ research-arc*.webp 2개는 현재 미사용(과거 버전 잔존, 삭제해도 무방)
   media/              SFD-Net 루프 클립 4개(mp4) + 포스터(jpg) + OG 카드(og_sfdnet.png)
   pdf/Inyoung_Oh_CV.pdf
 ```
@@ -64,7 +65,14 @@ PDF를 `assets/pdf/`에 넣고, `data.js`에서
   로컬에 보관한 `manifest.md` 참고
 - 캡션에 수치를 쓸 땐 논문 Table 1의 510모델 값만 사용
 
-### 7. 썸네일 이미지 추가
+### 7. 연구 아크 3단 카드 수정
+홈 상단의 POINT CLOUDS → IMAGES → FOUNDATION MODELS 카드는 `index.html` 안에
+**인라인 SVG**로 들어 있습니다(이미지 파일 아님). 다크모드 색이 자동 전환되도록
+CSS 변수(`var(--accent)` 등)를 쓰므로, 색을 직접 지정하지 마세요.
+- 캡션·라벨 수정: 해당 `<a class="media-card">` 블록의 텍스트만 고치면 됨
+- 그림 자체(좌표)를 바꾸려면 생성 스크립트가 필요하니 요청하세요
+
+### 8. 썸네일 이미지 추가
 - 가로 640px, WebP 형식 권장 (수십 KB 수준 유지)
 - 무료 변환: https://squoosh.app (브라우저에서 리사이즈 + WebP 저장)
 - `assets/img/`에 넣고 `PUBS` 항목의 `thumb`에 경로 기입

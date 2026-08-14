@@ -8,7 +8,7 @@
    ============================================================ */
 
 const SITE = {
-  updated: "2026-07-06",            // shown in the footer — bump when you edit
+  updated: "2026-08-14",            // shown in the footer — bump when you edit
   cv: "assets/pdf/Inyoung_Oh_CV.pdf",
   researchStatement: null,          // set to "assets/pdf/Inyoung_Oh_Research_Summary.pdf" when ready to publish
   scholar: "https://scholar.google.co.kr/citations?hl=en&user=e3h5YtAAAAAJ&view_op=list_works&sortby=pubdate",
@@ -30,6 +30,7 @@ const BIO =
   "analysis (including SFD-Net, ECCV 2026) and metric 3D from monocular video.";
 
 const NEWS = [
+  { date: "2026-08-08", html: 'Our paper on <a href="publications.html#bmvc2026">lighting-aware augmentation for low-light re-identification</a> has been accepted to <em>BMVC 2026</em> &mdash; my first collaboration at KIST.' },
   { date: "2026-06-18", html: 'Our paper <strong>SFD-Net</strong> has been accepted to <em>ECCV 2026</em>. <a href="https://inyoungoh-cde.github.io/SFD-Net/" target="_blank" rel="noopener">Project page</a> · <a href="publications.html#sfdnet2026">details</a>.' },
   { date: "2026-05-19", html: 'Our paper on <a href="publications.html#ijig2026">attention-guided multi-scale normal estimation</a> has been accepted to the <em>International Journal of Image and Graphics</em>.' },
   { date: "2026-02-01", html: 'Started as a Postdoctoral Fellow in the Center for Artificial Intelligence at KIST, working on metric 3D from monocular video.' },
@@ -84,6 +85,19 @@ const PUBS = [
   year      = {2026}
 }`,
   },
+  {
+    id: "bmvc2026",
+    category: "international",
+    theme: "image3d",
+    selected: false,
+    date: "2026-08-08",
+    year: 2026,
+    title: "Lighting-Aware Diffusion-based Data Augmentation for Robust Low-Light Re-Identification",
+    authors: "Tuan Minh Bui, Dongbo Min, Inyoung Oh, Junghyun Cho",
+    venue: "British Machine Vision Conference (BMVC)",
+    badges: [{ kind: "status", text: "BMVC 2026 · accepted" }],
+  },
+
   {
     id: "ijig2026",
     category: "international",

@@ -30,6 +30,7 @@ const BIO =
   "analysis (including SFD-Net, ECCV 2026) and metric 3D from monocular video.";
 
 const NEWS = [
+  { date: "2026-09-01", html: 'I\'ll be presenting <a href="publications.html#sfdnet2026">SFD-Net</a> at <em>ECCV 2026</em> in Malmö — Thursday 10 September, 10:30–12:30, ExHall poster #73 (<a href="https://eccv.ecva.net/virtual/2026/poster/5657" target="_blank" rel="noopener">session page</a>).' },
   { date: "2026-08-08", html: 'Our paper on <a href="publications.html#bmvc2026">lighting-aware augmentation for low-light re-identification</a> has been accepted to <em>BMVC 2026</em>.' },
   { date: "2026-06-18", html: 'Our paper <strong>SFD-Net</strong> has been accepted to <em>ECCV 2026</em>. <a href="https://inyoungoh-cde.github.io/SFD-Net/" target="_blank" rel="noopener">Project page</a> · <a href="publications.html#sfdnet2026">details</a>.' },
   { date: "2026-05-19", html: 'Our paper on <a href="publications.html#ijig2026">attention-guided multi-scale normal estimation</a> has been accepted to the <em>International Journal of Image and Graphics</em>.' },

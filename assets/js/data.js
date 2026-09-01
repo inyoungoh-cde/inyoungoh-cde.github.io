@@ -278,7 +278,7 @@ const PUBS = [
     id: "reloc-prep",
     category: "inprep",
     theme: "image3d",
-    date: "2026-09-01",
+    date: "2026-08-31",   // in-prep 정렬 키
     year: 2026,
     title: "HuMeter: Metric Scale Recovery for Frozen Monocular Maps",
     authors: "Inyoung Oh, Donghyeok Min, Toan Manh Bui, Junghyun Cho",
@@ -289,7 +289,7 @@ const PUBS = [
     id: "dirstat-prep",
     category: "inprep",
     theme: "gdl",
-    date: "2026-06-01",
+    date: "2026-09-01",   // in-prep 정렬 키 (카드엔 연도만 표시)
     year: 2026,
     title: "Sharp Feature Is All You Need",
     authors: "Inyoung Oh, Toan Manh Bui, Donghyeok Min, Junghyun Cho",

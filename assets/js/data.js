@@ -8,7 +8,7 @@
    ============================================================ */
 
 const SITE = {
-  updated: "2026-08-14",            // shown in the footer — bump when you edit
+  updated: "2026-09-01",            // shown in the footer — bump when you edit
   cv: "assets/pdf/Inyoung_Oh_CV.pdf",
   researchStatement: null,          // set to "assets/pdf/Inyoung_Oh_Research_Summary.pdf" when ready to publish
   scholar: "https://scholar.google.co.kr/citations?hl=en&user=e3h5YtAAAAAJ&view_op=list_works&sortby=pubdate",
@@ -30,11 +30,11 @@ const BIO =
   "analysis (including SFD-Net, ECCV 2026) and metric 3D from monocular video.";
 
 const NEWS = [
-  { date: "2026-08-08", html: 'Our paper on <a href="publications.html#bmvc2026">lighting-aware augmentation for low-light re-identification</a> has been accepted to <em>BMVC 2026</em> &mdash; my first collaboration at KIST.' },
+  { date: "2026-08-08", html: 'Our paper on <a href="publications.html#bmvc2026">lighting-aware augmentation for low-light re-identification</a> has been accepted to <em>BMVC 2026</em>.' },
   { date: "2026-06-18", html: 'Our paper <strong>SFD-Net</strong> has been accepted to <em>ECCV 2026</em>. <a href="https://inyoungoh-cde.github.io/SFD-Net/" target="_blank" rel="noopener">Project page</a> · <a href="publications.html#sfdnet2026">details</a>.' },
   { date: "2026-05-19", html: 'Our paper on <a href="publications.html#ijig2026">attention-guided multi-scale normal estimation</a> has been accepted to the <em>International Journal of Image and Graphics</em>.' },
   { date: "2026-02-01", html: 'Started as a Postdoctoral Fellow in the Center for Artificial Intelligence at KIST, working on metric 3D from monocular video.' },
-  { date: "2025-11-06", html: 'Our paper on an <a href="publications.html#cii2026">MR remote-collaboration framework</a> has been accepted to <em>Computers in Industry</em>. Featured on the <a href="https://www.gist.ac.kr/kr/html/sub07/070102.html?mode=V&no=219806" target="_blank" rel="noopener">GIST website</a>, the <a href="https://blog.naver.com/bestgista/224105644900" target="_blank" rel="noopener">GIST blog</a>, and <a href="https://science.ytn.co.kr/program/view.php?mcd=0082&key=202512051106248007" target="_blank" rel="noopener">YTN Science</a>.' },
+  { date: "2025-11-06", html: 'Our paper on an <a href="publications.html#cii2026">MR remote-collaboration framework</a> has been accepted to <em>Computers in Industry</em>. Featured on the <a href="https://www.gist.ac.kr/kr/html/sub07/070102.html?mode=V&no=219806" target="_blank" rel="noopener">GIST website</a>, the <a href="https://blog.naver.com/bestgista/224105644900" target="_blank" rel="noopener">GIST blog</a>, and <a href="https://science.ytn.co.kr/program/view.php?mcd=0082&key=202512051106248007" target="_blank" rel="noopener">YTN Science</a>. <a href="https://github.com/inyoungoh-cde/mr-remote-collaboration" target="_blank" rel="noopener">Code</a>.' },
   { date: "2024-11-26", html: "Successfully defended my doctoral dissertation (degree conferred February 2026)." },
   { date: "2023-11-09", html: 'Our paper on <a href="publications.html#jcde2023">normal-guided LiDAR semantic segmentation</a> has been accepted to the <em>Journal of Computational Design and Engineering</em>.' },
   { date: "2021-12-22", html: "Presented my LiDAR research at a KEPCO research seminar: object-detection-based 3D LiDAR intensity calibration and real-time detection of clustered object candidates using deep learning." },
@@ -93,7 +93,7 @@ const PUBS = [
     date: "2026-08-08",
     year: 2026,
     title: "Lighting-Aware Diffusion-based Data Augmentation for Robust Low-Light Re-Identification",
-    authors: "Tuan Minh Bui, Dongbo Min, Inyoung Oh, Junghyun Cho",
+    authors: "Toan Manh Bui, Donghyeok Min, Inyoung Oh, Junghyun Cho",
     venue: "British Machine Vision Conference (BMVC)",
     badges: [{ kind: "status", text: "BMVC 2026 · accepted" }],
     thumb: "assets/img/pub-bmvc.webp",
@@ -141,6 +141,7 @@ const PUBS = [
       "Accurate pose estimation is crucial for aligning virtual content with physical surroundings in Mixed Reality. This paper proposes a learning-based approach for accurate 6-DoF pose estimation from a single monocular RGB image, eliminating the need for markers and depth sensors. The method combines YOLO6D with an RoI-based color augmentation technique using PCA, mitigating the effects of background variation and lighting changes. The estimator is integrated into an MR-based remote collaboration framework that keeps information rendering consistent and robust across devices, and experiments demonstrate superior performance over strong baselines.",
     links: [
       { label: "Paper", url: "https://doi.org/10.1016/j.compind.2025.104414" },
+      { label: "Code", url: "https://github.com/inyoungoh-cde/mr-remote-collaboration" },
     ],
     bibtex:
 `@article{oh2026mixed,
@@ -262,13 +263,24 @@ const PUBS = [
 
   /* ================= In preparation (title-only by design) ================= */
   {
+    id: "panopolis-review",
+    category: "inprep",
+    theme: "image3d",
+    date: "2026-08-22",
+    year: 2026,
+    title: "PanOpolis: City-Scale Panorama-to-Panorama Place Recognition with Orientation for Free",
+    authors: "Donghyeok Min, Toan Manh Bui, Inyoung Oh, Junghyun Cho",
+    venue: "Under review",
+    badges: [{ kind: "status", text: "under review" }],
+  },
+  {
     id: "reloc-prep",
     category: "inprep",
     theme: "image3d",
-    date: "2026-07-01",
+    date: "2026-09-01",
     year: 2026,
-    title: "Metric Relocalization in Up-to-Scale Maps via Ground-Plane Geometry",
-    authors: "Inyoung Oh, et al.",
+    title: "HuMeter: One Person Makes a Frozen Monocular Map Metric",
+    authors: "Inyoung Oh, Toan Manh Bui, Donghyeok Min, Junghyun Cho",
     venue: "Manuscript in preparation",
     badges: [{ kind: "status", text: "in preparation" }],
   },
